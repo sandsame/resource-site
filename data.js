@@ -7,9 +7,14 @@ var SITE_DATA = {
     { name: "考研考公", icon: "🎓" },
     { name: "编程技术", icon: "💻" },
     { name: "设计素材", icon: "🎨" },
+    { name: "游戏", icon: "🎮" },
     { name: "更多资源", icon: "📦" }
   ],
   resources: [
+    {"id": 179, "title": "1979革命 黑色星期五  [汉化版]Steam移植", "category": "游戏", "tags": ["游戏", "安卓"], "link": "https://pan.quark.cn/s/dce235bf3e88", "desc": "1979革命 黑色星期五  [汉化版]Steam移植", "date": "2026-05-29"},
+    {"id": 180, "title": "3D天堂岛", "category": "游戏", "tags": ["游戏", "安卓"], "link": "https://pan.quark.cn/s/6edb9c3032d7", "desc": "3D天堂岛", "date": "2026-05-29"},
+    {"id": 181, "title": "60秒", "category": "游戏", "tags": ["游戏", "安卓"], "link": "https://pan.quark.cn/s/02795f0ddb28", "desc": "60秒", "date": "2026-05-29"},
+    {"id": 182, "title": "70亿人", "category": "游戏", "tags": ["游戏", "安卓"], "link": "https://pan.quark.cn/s/772b779fbdca", "desc": "70亿人", "date": "2026-05-29"},
     {"id": 174, "title": "100篇英语晨读小作文", "category": "小学英语", "tags": ["英语", "晨读", "阅读"], "link": "https://pan.quark.cn/s/8e796cd0c5e4", "desc": "100篇英语晨读小作文", "date": "2026-05-29"},
     {"id": 175, "title": "稀缺英语早晚朗读1-38级绘本 Beginning Reader Stories", "category": "小学英语", "tags": ["英语", "晨读", "阅读"], "link": "https://pan.quark.cn/s/b688bdf8ccad", "desc": "稀缺英语早晚朗读1-38级绘本 Beginning Reader Stories", "date": "2026-05-29"},
     {"id": 176, "title": "小学英语经典晨读上", "category": "小学英语", "tags": ["英语", "晨读", "阅读"], "link": "https://pan.quark.cn/s/d10dcd3ffaee", "desc": "小学英语经典晨读上", "date": "2026-05-29"},
