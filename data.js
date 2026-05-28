@@ -10,6 +10,11 @@ var SITE_DATA = {
     { name: "更多资源", icon: "📦" }
   ],
   resources: [
+    {"id": 174, "title": "100篇英语晨读小作文", "category": "小学英语", "tags": ["英语", "晨读", "阅读"], "link": "https://pan.quark.cn/s/8e796cd0c5e4", "desc": "100篇英语晨读小作文", "date": "2026-05-29"},
+    {"id": 175, "title": "稀缺英语早晚朗读1-38级绘本 Beginning Reader Stories", "category": "小学英语", "tags": ["英语", "晨读", "阅读"], "link": "https://pan.quark.cn/s/b688bdf8ccad", "desc": "稀缺英语早晚朗读1-38级绘本 Beginning Reader Stories", "date": "2026-05-29"},
+    {"id": 176, "title": "小学英语经典晨读上", "category": "小学英语", "tags": ["英语", "晨读", "阅读"], "link": "https://pan.quark.cn/s/d10dcd3ffaee", "desc": "小学英语经典晨读上", "date": "2026-05-29"},
+    {"id": 177, "title": "小学英语经典晨读下", "category": "小学英语", "tags": ["英语", "晨读", "阅读"], "link": "https://pan.quark.cn/s/df99fd780a81", "desc": "小学英语经典晨读下", "date": "2026-05-29"},
+    {"id": 178, "title": "小学英语经典晨读中", "category": "小学英语", "tags": ["英语", "晨读", "阅读"], "link": "https://pan.quark.cn/s/f48922d91731", "desc": "小学英语经典晨读中", "date": "2026-05-29"},
     {"id": 168, "title": "1.一年级下册", "category": "小学综合", "tags": ["综合", "下册"], "link": "https://pan.quark.cn/s/3913e71eb444", "desc": "1.一年级下册", "date": "2026-05-29"},
     {"id": 169, "title": "2.二年级下册", "category": "小学综合", "tags": ["综合", "下册"], "link": "https://pan.quark.cn/s/1182a47c0cb5", "desc": "2.二年级下册", "date": "2026-05-29"},
     {"id": 170, "title": "3.三年级下册", "category": "小学综合", "tags": ["综合", "下册"], "link": "https://pan.quark.cn/s/ec4825d81d07", "desc": "3.三年级下册", "date": "2026-05-29"},
