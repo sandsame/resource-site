@@ -3,166 +3,438 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>免费学习资料库</title>
+    <title>资源小站 - 免费学习资料领取</title>
+    <meta name="description" content="免费学习资料导航，小学语文数学英语、古籍电子书等优质资源，一键领取保存到网盘">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background: #f5f7fa;
-            color: #333;
-            line-height: 1.6;
-        }
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-        .header h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
-        .header p { opacity: 0.9; font-size: 0.95rem; }
-        .container { max-width: 800px; margin: 0 auto; padding: 1rem; }
-        .search-box {
-            width: 100%;
-            padding: 0.8rem 1rem;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
-            font-size: 1rem;
-            margin: 1rem 0;
-            outline: none;
-            transition: border-color 0.2s;
-        }
-        .search-box:focus { border-color: #667eea; }
-        .filter-bar {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            margin-bottom: 1rem;
-        }
-        .filter-btn {
-            padding: 0.4rem 0.8rem;
-            border: 1px solid #e2e8f0;
-            border-radius: 20px;
-            background: white;
-            cursor: pointer;
-            font-size: 0.85rem;
-            transition: all 0.2s;
-        }
-        .filter-btn.active, .filter-btn:hover {
-            background: #667eea;
-            color: white;
-            border-color: #667eea;
-        }
-        .resource-list { list-style: none; }
-        .resource-item {
-            background: white;
-            border-radius: 10px;
-            padding: 1rem;
-            margin-bottom: 0.8rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .resource-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-        }
-        .resource-item h3 { font-size: 1rem; margin-bottom: 0.3rem; }
-        .resource-item .desc { color: #666; font-size: 0.85rem; margin-bottom: 0.5rem; }
-        .resource-item .meta { display: flex; justify-content: space-between; align-items: center; }
-        .resource-item .tags { display: flex; gap: 0.3rem; flex-wrap: wrap; }
-        .tag {
-            background: #eef2ff;
-            color: #667eea;
-            padding: 0.15rem 0.5rem;
-            border-radius: 10px;
-            font-size: 0.75rem;
-        }
-        .download-btn {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 0.85rem;
-            white-space: nowrap;
-        }
-        .download-btn:hover { background: #5a6fd6; }
-        .empty { text-align: center; padding: 3rem; color: #999; }
-        .footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            color: #999;
-            font-size: 0.8rem;
-        }
-    </style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    background: #f5f6fa;
+    color: #333;
+    line-height: 1.5;
+    font-size: 15px;
+    -webkit-tap-highlight-color: transparent;
+}
+.top-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.site-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a2e;
+}
+.top-actions { display: flex; gap: 16px; }
+.top-actions button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 4px;
+    color: #555;
+}
+.search-wrap {
+    position: sticky;
+    top: 52px;
+    z-index: 99;
+    background: #f5f6fa;
+    padding: 10px 16px 8px;
+}
+.search-box {
+    width: 100%;
+    padding: 12px 16px 12px 40px;
+    border: 2px solid #e8e8e8;
+    border-radius: 10px;
+    font-size: 15px;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='%23999' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27A6.47 6.47 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E") 12px center no-repeat;
+    outline: none;
+    transition: border-color 0.2s;
+}
+.search-box:focus { border-color: #4a6cf7; }
+.tip-bar {
+    background: #fff8e6;
+    padding: 10px 16px;
+    font-size: 13px;
+    color: #8a6d00;
+    border-bottom: 1px solid #f0e4b8;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.container { max-width: 640px; margin: 0 auto; padding: 0 0 24px; }
+.section { padding: 20px 16px 0; }
+.section-title {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.daily-list { display: flex; flex-direction: column; gap: 10px; }
+.daily-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    position: relative;
+}
+.daily-item .info { flex: 1; min-width: 0; }
+.daily-item .date { font-size: 12px; color: #999; margin-bottom: 2px; }
+.daily-item .title {
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.badge-new {
+    position: absolute;
+    top: 8px;
+    right: 80px;
+    background: #ff4757;
+    color: #fff;
+    font-size: 10px;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+.btn-get {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 64px;
+    height: 36px;
+    background: #4a6cf7;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    flex-shrink: 0;
+    margin-left: 12px;
+    transition: background 0.2s;
+}
+.btn-get:active { background: #3a5ae0; }
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+.category-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 16px 12px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+.category-card:active { transform: scale(0.96); }
+.category-card .icon { font-size: 28px; margin-bottom: 6px; }
+.category-card .name { font-size: 14px; font-weight: 500; color: #333; }
+.category-card .count { font-size: 11px; color: #999; margin-top: 2px; }
+.hot-list { display: flex; flex-direction: column; gap: 10px; }
+.hot-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 14px 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hot-card .info { flex: 1; min-width: 0; }
+.hot-card .title { font-size: 14px; font-weight: 500; margin-bottom: 2px; }
+.hot-card .desc {
+    font-size: 12px;
+    color: #888;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.resource-list { display: flex; flex-direction: column; gap: 10px; }
+.resource-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 14px 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.resource-card .info { flex: 1; min-width: 0; }
+.resource-card .title { font-size: 14px; font-weight: 500; margin-bottom: 2px; }
+.resource-card .desc {
+    font-size: 12px;
+    color: #888;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.footer {
+    text-align: center;
+    padding: 24px 16px;
+    font-size: 12px;
+    color: #bbb;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.menu-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 200;
+}
+.menu-overlay.show { display: block; }
+.menu-panel {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 260px;
+    height: 100%;
+    background: #fff;
+    z-index: 201;
+    padding: 60px 20px 20px;
+    transition: right 0.25s ease;
+    overflow-y: auto;
+}
+.menu-panel.show { right: 0; }
+.menu-panel h3 { font-size: 16px; margin-bottom: 16px; }
+.menu-panel a {
+    display: block;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    font-size: 15px;
+}
+.menu-panel a:active { color: #4a6cf7; }
+.menu-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+}
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+.back-btn:active { background: #e0e0e0; }
+@media (min-width: 640px) {
+    .category-grid { grid-template-columns: repeat(4, 1fr); }
+}
+</style>
 </head>
 <body>
-    <div class="header">
-        <h1>免费学习资料库</h1>
-        <p>精选学习资料，免费领取，持续更新中</p>
+<div class="top-bar">
+    <span class="site-name">资源小站</span>
+    <div class="top-actions">
+        <button onclick="focusSearch()" aria-label="搜索">🔍</button>
+        <button onclick="toggleMenu()" aria-label="分类菜单">☰</button>
     </div>
-    <div class="container">
-        <input type="text" class="search-box" placeholder="搜索资料..." id="searchInput">
-        <div class="filter-bar" id="filterBar"></div>
-        <ul class="resource-list" id="resourceList"></ul>
-        <div class="empty" id="emptyState" style="display:none;">没有找到相关资料</div>
+</div>
+<div class="search-wrap">
+    <input type="text" class="search-box" placeholder="搜索资料名称..." id="searchInput" autocomplete="off">
+</div>
+<div class="tip-bar" id="tipBar">📢 <span id="tipText"></span></div>
+<div class="container">
+    <div class="section" id="dailySection">
+        <div class="section-title">🔥 每日更新</div>
+        <div class="daily-list" id="dailyList"></div>
+        <div style="text-align:center;margin-top:12px;">
+            <a href="#" id="dailyMore" style="font-size:13px;color:#4a6cf7;text-decoration:none;">查看更多更新 ▸</a>
+        </div>
     </div>
-    <div class="footer">
-        <p>资料持续更新中 | 关注公众号获取更多资源</p>
+    <div class="section" id="categorySection">
+        <div class="section-title">📁 资料分类</div>
+        <div class="category-grid" id="categoryGrid"></div>
     </div>
-    <script>
-    let resources = [{"id":1,"title":"道家古籍合集","category":"古籍电子书","tags":["道家","古籍"],"link":"https://pan.quark.cn/s/92bcf71a780c","desc":"道家经典古籍电子书合集"},{"id":2,"title":"道教类古籍合集","category":"古籍电子书","tags":["道教","古籍"],"link":"https://pan.quark.cn/s/92bcf71a780c","desc":"道教典籍电子书合集"},{"id":3,"title":"佛教类古籍合集","category":"古籍电子书","tags":["佛教","古籍"],"link":"https://pan.quark.cn/s/92bcf71a780c","desc":"佛教经典古籍电子书合集"},{"id":4,"title":"风水类古籍合集","category":"古籍电子书","tags":["风水","玄学","古籍"],"link":"https://pan.quark.cn/s/92bcf71a780c","desc":"风水堪舆类古籍电子书合集"},{"id":5,"title":"古代生活类古籍合集","category":"古籍电子书","tags":["古代生活","历史","古籍"],"link":"https://pan.quark.cn/s/92bcf71a780c","desc":"古代生活百科类古籍电子书合集"},{"id":6,"title":"古籍医书合集","category":"古籍电子书","tags":["中医","医书","古籍"],"link":"https://pan.quark.cn/s/92bcf71a780c","desc":"古代中医典籍电子书合集"},{"id":7,"title":"古图类合集","category":"古籍电子书","tags":["古图","地图","古籍"],"link":"https://pan.quark.cn/s/92bcf71a780c","desc":"珍贵古代图集电子版合集"},{"id":8,"title":"连山易古籍合集","category":"古籍电子书","tags":["连山易","易学","古籍"],"link":"https://pan.quark.cn/s/92bcf71a780c","desc":"连山易相关古籍电子书合集"},{"id":9,"title":"推背图合集","category":"古籍电子书","tags":["推背图","预言","古籍"],"link":"https://pan.quark.cn/s/92bcf71a780c","desc":"推背图各版本电子书合集"},{"id":10,"title":"易经类古籍合集","category":"古籍电子书","tags":["易经","周易","古籍"],"link":"https://pan.quark.cn/s/92bcf71a780c","desc":"易经周易类古籍电子书合集"},{"id":11,"title":"永乐大典合集","category":"古籍电子书","tags":["永乐大典","百科","古籍"],"link":"https://pan.quark.cn/s/92bcf71a780c","desc":"永乐大典电子版合集"},{"id":12,"title":"医书类古籍合集","category":"古籍电子书","tags":["中医","医书","古籍"],"link":"https://pan.quark.cn/s/92bcf71a780c","desc":"古代医学典籍电子书合集"},{"id":13,"title":"祝由全套古籍合集","category":"古籍电子书","tags":["祝由","古籍"],"link":"https://pan.quark.cn/s/92bcf71a780c","desc":"祝由术全套古籍电子书合集"},{"id":14,"title":"1-6年级上册形近字","category":"小学语文","tags":["语文","形近字","1-6年级"],"link":"https://pan.quark.cn/s/bb34844fedc3","desc":"小学1-6年级上册形近字练习资料"},{"id":15,"title":"1-6年级语文仿写","category":"小学语文","tags":["语文","仿写","1-6年级"],"link":"https://pan.quark.cn/s/4856e7ff1509","desc":"小学1-6年级语文仿写训练"},{"id":16,"title":"1-6上册阅读理解","category":"小学语文","tags":["语文","阅读理解","1-6年级"],"link":"https://pan.quark.cn/s/fa47122b1679","desc":"小学1-6年级上册阅读理解练习"},{"id":17,"title":"1-6语文上必背和默写","category":"小学语文","tags":["语文","背诵","默写","1-6年级"],"link":"https://pan.quark.cn/s/56fafaed92ee","desc":"小学1-6年级语文上册必背课文及默写内容"},{"id":18,"title":"1-6语文上册知识点","category":"小学语文","tags":["语文","知识点","1-6年级"],"link":"https://pan.quark.cn/s/dd4654da8277","desc":"小学1-6年级语文上册知识点汇总"},{"id":19,"title":"25版小学奥数专题突破AB卷","category":"小学数学","tags":["数学","奥数","专题"],"link":"https://pan.quark.cn/s/868245f56cd8","desc":"2025版小学奥数专题突破AB卷"},{"id":20,"title":"25秋1-6年级词语搭配练习题","category":"小学语文","tags":["语文","词语搭配","1-6年级"],"link":"https://pan.quark.cn/s/4ec222c8bf25","desc":"2025秋季1-6年级词语搭配练习题"},{"id":21,"title":"25秋53小学基础练3-6上作文素材大全","category":"小学语文","tags":["语文","作文","素材","3-6年级"],"link":"https://pan.quark.cn/s/46620ad04626","desc":"2025秋季53小学基础练3-6年级上册作文素材大全"},{"id":22,"title":"25秋北师版1-6年级上册数学测试卷","category":"小学数学","tags":["数学","北师大","测试卷","1-6年级"],"link":"https://pan.quark.cn/s/2d7888a12d66","desc":"2025秋北师版1-6年级上册数学单元测试+期中期末真题卷"},{"id":23,"title":"25秋数学1-6年级上册热门资料","category":"小学数学","tags":["数学","热门","1-6年级"],"link":"https://pan.quark.cn/s/f850b14dc1ac","desc":"2025秋季数学1-6年级上册热门资料合集"},{"id":24,"title":"25秋语文1-6课课贴","category":"小学语文","tags":["语文","课课贴","1-6年级"],"link":"https://pan.quark.cn/s/a28f5f9de3b7","desc":"2025秋季语文1-6年级课课贴"},{"id":25,"title":"25秋语文1-6年级上册热门资料","category":"小学语文","tags":["语文","热门","1-6年级"],"link":"https://pan.quark.cn/s/d14f23a554ff","desc":"2025秋季语文1-6年级上册热门资料合集"},{"id":26,"title":"25秋语文写字每日一练","category":"小学语文","tags":["语文","写字","字帖"],"link":"https://pan.quark.cn/s/1d072bdba4ff","desc":"2025秋季语文写字每日一练"},{"id":27,"title":"25秋53积累与默写","category":"小学语文","tags":["语文","积累","默写"],"link":"https://pan.quark.cn/s/3b8a6527c7f1","desc":"2025秋季53积累与默写"},{"id":28,"title":"25秋时光学课堂笔记人教PEP3-6","category":"小学英语","tags":["英语","课堂笔记","人教PEP","3-6年级"],"link":"https://pan.quark.cn/s/711b075547a9","desc":"2025秋季时光学课堂笔记人教PEP版英语3-6年级"},{"id":29,"title":"25秋实验班应用题解题高手","category":"小学数学","tags":["数学","应用题","解题"],"link":"https://pan.quark.cn/s/3b5e87f9b091","desc":"2025秋季实验班应用题解题高手"},{"id":30,"title":"25秋生字+组词+字帖语文1-6年级","category":"小学语文","tags":["语文","生字","组词","字帖","1-6年级"],"link":"https://pan.quark.cn/s/958a519088cd","desc":"2025秋季语文1-6年级生字组词字帖"},{"id":31,"title":"25秋王朝霞语文活页同步字帖1-6上","category":"小学语文","tags":["语文","字帖","王朝霞","1-6年级"],"link":"https://pan.quark.cn/s/6fcea4996058","desc":"2025秋季王朝霞语文活页同步字帖1-6年级上册"},{"id":32,"title":"25秋小学学霸冲A卷数学北师大1-6","category":"小学数学","tags":["数学","北师大","学霸冲A卷","1-6年级"],"link":"https://pan.quark.cn/s/56aab4f7bf37","desc":"2025秋季小学学霸冲A卷数学北师大版1-6年级"},{"id":33,"title":"25秋小学学霸冲A卷数学人教版1-6","category":"小学数学","tags":["数学","人教版","学霸冲A卷","1-6年级"],"link":"https://pan.quark.cn/s/b8310bf59c42","desc":"2025秋季小学学霸冲A卷数学人教版1-6年级"},{"id":34,"title":"25秋小学学霸冲A卷数学苏教版1456","category":"小学数学","tags":["数学","苏教版","学霸冲A卷"],"link":"https://pan.quark.cn/s/4017f71470c2","desc":"2025秋季小学学霸冲A卷数学苏教版"},{"id":35,"title":"25秋小学学霸冲A卷语文1-6","category":"小学语文","tags":["语文","学霸冲A卷","1-6年级"],"link":"https://pan.quark.cn/s/863e2ede1b50","desc":"2025秋季小学学霸冲A卷语文1-6年级"},{"id":36,"title":"25秋小学学霸冲A卷英语人教版3-6","category":"小学英语","tags":["英语","人教版","学霸冲A卷","3-6年级"],"link":"https://pan.quark.cn/s/b182ffb624eb","desc":"2025秋季小学学霸冲A卷英语人教版3-6年级"},{"id":37,"title":"25秋一本小学语文阅读训练100篇1-6","category":"小学语文","tags":["语文","阅读训练","1-6年级"],"link":"https://pan.quark.cn/s/ce708b029942","desc":"2025秋季一本小学语文阅读训练100篇第13版1-6年级"},{"id":38,"title":"25秋一本小学英语阅读训练100篇3-6","category":"小学英语","tags":["英语","阅读训练","人教版","3-6年级"],"link":"https://pan.quark.cn/s/ff8b4967fc00","desc":"2025秋季一本小学英语阅读训练100篇第九版3-6年级"},{"id":39,"title":"25秋一本阅读题语文","category":"小学语文","tags":["语文","阅读"],"link":"https://pan.quark.cn/s/73b8fc1e6fac","desc":"2025秋季一本阅读题语文"},{"id":40,"title":"25秋一本预习笔记语数外1-6上","category":"小学综合","tags":["语文","数学","英语","预习笔记","1-6年级"],"link":"https://pan.quark.cn/s/c7bf4fa51968","desc":"2025秋季一本预习笔记语数外人教北师1-6年级上册"},{"id":41,"title":"26版一本小学语文阅读真题80篇1-6","category":"小学语文","tags":["语文","阅读真题","1-6年级"],"link":"https://pan.quark.cn/s/f1be83036ecf","desc":"2026版一本小学语文阅读真题80篇1-6年级"},{"id":42,"title":"2025秋3-6年级英语字帖","category":"小学英语","tags":["英语","字帖","3-6年级"],"link":"https://pan.quark.cn/s/27ea24e786b2","desc":"2025秋季3-6年级英语字帖"},{"id":43,"title":"2025秋53全优好卷语文1-6","category":"小学语文","tags":["语文","53全优卷","1-6年级"],"link":"https://pan.quark.cn/s/e66183a08438","desc":"2025秋季53全优好卷语文1-6年级"},{"id":44,"title":"2025秋53全优卷人教数学1-6","category":"小学数学","tags":["数学","人教版","53全优卷","1-6年级"],"link":"https://pan.quark.cn/s/1df003a70700","desc":"2025秋季53全优卷人教数学1-6年级"},{"id":45,"title":"2025秋53全优卷英语人教3456","category":"小学英语","tags":["英语","人教版","53全优卷","3-6年级"],"link":"https://pan.quark.cn/s/016c60476b78","desc":"2025秋季53全优卷英语人教版3-6年级"},{"id":46,"title":"2025秋课堂笔记预习课语文1-6","category":"小学语文","tags":["语文","课堂笔记","预习","1-6年级"],"link":"https://pan.quark.cn/s/6c7d3b322ea5","desc":"2025秋季课堂笔记预习课语文1-6年级"},{"id":47,"title":"2025秋全能课堂课堂笔记数学人教1-6","category":"小学数学","tags":["数学","人教版","课堂笔记","1-6年级"],"link":"https://pan.quark.cn/s/4c8cf89557c8","desc":"2025秋季全能课堂课堂笔记数学人教版1-6年级"},{"id":48,"title":"2025秋时光学课堂笔记人教PEP3-6","category":"小学英语","tags":["英语","课堂笔记","人教PEP","3-6年级"],"link":"https://pan.quark.cn/s/b686e268f7b6","desc":"2025秋季时光学课堂笔记人教PEP版英语3-6年级"},{"id":49,"title":"2025秋王朝霞活页卷数学北师1-6","category":"小学数学","tags":["数学","北师大","王朝霞","1-6年级"],"link":"https://pan.quark.cn/s/41ac9c7e589e","desc":"2025秋季王朝霞活页卷数学北师版1-6年级"},{"id":50,"title":"2025秋王朝霞活页卷数学人教1-6","category":"小学数学","tags":["数学","人教版","王朝霞","1-6年级"],"link":"https://pan.quark.cn/s/4ae718779dbb","desc":"2025秋季王朝霞活页卷数学人教版1-6年级"},{"id":51,"title":"2025秋王朝霞活页卷语文1-6","category":"小学语文","tags":["语文","王朝霞","1-6年级"],"link":"https://pan.quark.cn/s/1e43ae0ce477","desc":"2025秋季王朝霞活页卷语文1-6年级"},{"id":52,"title":"2025秋王朝霞活页卷英语人教3-6","category":"小学英语","tags":["英语","人教版","王朝霞","3-6年级"],"link":"https://pan.quark.cn/s/df0ce3f88008","desc":"2025秋季王朝霞活页卷英语人教版3-6年级"},{"id":53,"title":"2025秋一本周末测试小卷人教数学1-6","category":"小学数学","tags":["数学","人教版","周末测试","1-6年级"],"link":"https://pan.quark.cn/s/851ede493d97","desc":"2025秋季一本周末测试小卷人教数学1-6年级"},{"id":54,"title":"2025秋一本周末测试小卷人教英语3456","category":"小学英语","tags":["英语","人教版","周末测试","3-6年级"],"link":"https://pan.quark.cn/s/33f1784212bb","desc":"2025秋季一本周末测试小卷人教英语3-6年级"},{"id":55,"title":"2025秋一本周末测试小卷语文1-6","category":"小学语文","tags":["语文","周末测试","1-6年级"],"link":"https://pan.quark.cn/s/8ec718afccdc","desc":"2025秋季一本周末测试小卷语文1-6年级"},{"id":56,"title":"晨读好句好段练笔","category":"小学语文","tags":["语文","晨读","好句好段"],"link":"https://pan.quark.cn/s/03258d06e1e3","desc":"小学语文晨读好句好段练笔素材"},{"id":57,"title":"彩虹屁","category":"小学语文","tags":["语文","评语","彩虹屁"],"link":"https://pan.quark.cn/s/f7f1d055cd11","desc":"小学生彩虹屁评语素材"},{"id":58,"title":"计算大作战","category":"小学数学","tags":["数学","计算","练习"],"link":"https://pan.quark.cn/s/0a8f972b527f","desc":"小学数学计算大作战练习题"},{"id":59,"title":"课课贴（数学）","category":"小学数学","tags":["数学","课课贴"],"link":"https://pan.quark.cn/s/b541d71ebd77","desc":"小学数学课课贴"},{"id":60,"title":"思维应用题","category":"小学数学","tags":["数学","思维","应用题"],"link":"https://pan.quark.cn/s/024b2dd7d254","desc":"小学数学思维应用题训练"},{"id":61,"title":"数学1-6年级上期中卷多版本","category":"小学数学","tags":["数学","期中卷","多版本","1-6年级"],"link":"https://pan.quark.cn/s/6b5f4a6f77a1","desc":"数学1-6年级上册期中卷（人教/苏教/北师/西师/青岛/冀教）"},{"id":62,"title":"数学必背公式大全1-6年级","category":"小学数学","tags":["数学","公式","1-6年级"],"link":"https://pan.quark.cn/s/761e30423f1f","desc":"小学数学1-6年级必背公式大全"},{"id":63,"title":"数学专项练习","category":"小学数学","tags":["数学","专项"],"link":"https://pan.quark.cn/s/436f162ad1f8","desc":"小学数学专项练习题集"},{"id":64,"title":"语数英1-6年级期中试卷A+题优名卷","category":"小学综合","tags":["语文","数学","英语","期中","1-6年级"],"link":"https://pan.quark.cn/s/2a05e1dc4264","desc":"语数英1-6年级期中试卷电子版A+题优名卷"},{"id":65,"title":"语文好词好句描写","category":"小学语文","tags":["语文","好词好句","写作"],"link":"https://pan.quark.cn/s/379b182fd915","desc":"小学语文好词好句描写素材"},{"id":66,"title":"语文同步作文范文","category":"小学语文","tags":["语文","作文","范文"],"link":"https://pan.quark.cn/s/abec2ebeab5f","desc":"小学语文同步作文范文集"},{"id":67,"title":"语文专项练习","category":"小学语文","tags":["语文","专项"],"link":"https://pan.quark.cn/s/472f80df8889","desc":"小学语文专项练习题集"},{"id":68,"title":"一学就会的看图写话","category":"小学语文","tags":["语文","看图写话","低年级"],"link":"https://pan.quark.cn/s/3af28c9bb1eb","desc":"小学低年级看图写话训练"},{"id":69,"title":"英语晨读美文","category":"小学英语","tags":["英语","晨读","美文"],"link":"https://pan.quark.cn/s/2214b15917f7","desc":"小学英语晨读美文素材"},{"id":70,"title":"英语数字字母练习","category":"小学英语","tags":["英语","数字","字母","基础"],"link":"https://pan.quark.cn/s/ab31310aed38","desc":"小学英语数字字母基础练习"},{"id":71,"title":"最新1-6年级上册自制热门资料","category":"小学综合","tags":["语文","数学","热门","1-6年级"],"link":"https://pan.quark.cn/s/c35397baaf45","desc":"最新1-6年级上册自制热门资料合集"},{"id":72,"title":"2025秋三-六上册英语各单元范文","category":"小学英语","tags":["英语","范文","3-6年级"],"link":"https://pan.quark.cn/s/15df2db64350","desc":"2025秋季三至六年级上册英语各单元范文"}];
-    let currentCategory = '全部';
+    <div class="section" id="hotSection">
+        <div class="section-title">⭐ 大家都在看</div>
+        <div class="hot-list" id="hotList"></div>
+    </div>
+    <div class="section" id="listSection" style="display:none;">
+        <div class="section-title" id="listTitle"><a href="#" class="back-btn" onclick="showHome();return false;">←</a><span id="listTitleText">搜索结果</span></div>
+        <div class="resource-list" id="resourceList"></div>
+        <div id="emptyState" style="display:none;text-align:center;padding:40px 0;color:#999;">没有找到相关资料</div>
+    </div>
+</div>
+<footer class="footer">
+    <span>资源小站 · 免费资料导航</span>
+    <span>仅供学习交流使用</span>
+</footer>
+<div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+<div class="menu-panel" id="menuPanel">
+    <button class="menu-close" onclick="toggleMenu()">✕</button>
+    <h3>资料分类</h3>
+    <div id="menuLinks"></div>
+</div>
+<script src="data.js"></script>
+<script>
+var data = SITE_DATA;
+var resources = data.resources;
+var categories = data.categories;
 
-    renderFilters();
-    renderList();
+document.getElementById('tipText').textContent = data.tip;
 
-    function renderFilters() {
-        const categories = ['全部', ...new Set(resources.map(r => r.category))];
-        const bar = document.getElementById('filterBar');
-        bar.innerHTML = categories.map(c =>
-            `<button class="filter-btn ${c === currentCategory ? 'active' : ''}" onclick="filterBy('${c}')">${c}</button>`
-        ).join('');
-    }
+function formatDate(d) {
+    var parts = d.split('-');
+    return parts[1].replace(/^0/,'') + '/' + parts[2].replace(/^0/,'');
+}
 
-    function filterBy(category) {
-        currentCategory = category;
-        renderFilters();
-        renderList();
-    }
+function isRecent(d) {
+    var now = new Date();
+    var date = new Date(d);
+    return (now - date) / 86400000 <= 7;
+}
 
-    function renderList() {
-        const keyword = document.getElementById('searchInput').value.toLowerCase();
-        const filtered = resources.filter(r => {
-            const matchCategory = currentCategory === '全部' || r.category === currentCategory;
-            const matchKeyword = !keyword || r.title.toLowerCase().includes(keyword)
-                || r.tags.some(t => t.toLowerCase().includes(keyword))
-                || r.desc.toLowerCase().includes(keyword);
-            return matchCategory && matchKeyword;
-        });
+function renderDaily() {
+    var recent = resources.filter(function(r){ return isRecent(r.date); }).slice(0, 5);
+    if (recent.length === 0) recent = resources.slice(0, 5);
+    var html = '';
+    recent.forEach(function(r, i) {
+        html += '<div class="daily-item">' +
+            '<div class="info"><div class="date">' + formatDate(r.date) + '</div>' +
+            '<div class="title">' + r.title + '</div></div>' +
+            (i < 2 ? '<span class="badge-new">NEW</span>' : '') +
+            '<a href="' + r.link + '" target="_blank" rel="noopener" class="btn-get">领取</a></div>';
+    });
+    document.getElementById('dailyList').innerHTML = html;
+}
 
-        const list = document.getElementById('resourceList');
-        const empty = document.getElementById('emptyState');
+function renderCategories() {
+    var grid = document.getElementById('categoryGrid');
+    var menu = document.getElementById('menuLinks');
+    var html = '';
+    var menuHtml = '';
+    categories.forEach(function(c) {
+        var matchList = c.match ? c.match : [c.name];
+        var count = resources.filter(function(r){ return matchList.indexOf(r.category) !== -1; }).length;
+        html += '<div class="category-card" onclick="showCategory(\'' + c.name + '\')">' +
+            '<div class="icon">' + c.icon + '</div>' +
+            '<div class="name">' + c.name + '</div>' +
+            '<div class="count">' + count + '个资源</div></div>';
+        menuHtml += '<a href="#" onclick="showCategory(\'' + c.name + '\');toggleMenu();return false;">' +
+            c.icon + ' ' + c.name + ' (' + count + ')</a>';
+    });
+    grid.innerHTML = html;
+    menu.innerHTML = menuHtml;
+}
 
-        if (filtered.length === 0) {
-            list.innerHTML = '';
-            empty.style.display = 'block';
-            return;
-        }
-        empty.style.display = 'none';
-        list.innerHTML = filtered.map(r => `
-            <li class="resource-item">
-                <h3>${r.title}</h3>
-                <p class="desc">${r.desc}</p>
-                <div class="meta">
-                    <div class="tags">${r.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
-                    <a href="${r.link}" target="_blank" rel="noopener" class="download-btn">免费领取</a>
-                </div>
-            </li>
-        `).join('');
-    }
+function renderHot() {
+    var hot = resources.filter(function(r){ return r.featured; }).slice(0, 5);
+    var html = '';
+    hot.forEach(function(r) {
+        html += '<div class="hot-card"><div class="info">' +
+            '<div class="title">' + r.title + '</div>' +
+            '<div class="desc">' + r.desc + '</div></div>' +
+            '<a href="' + r.link + '" target="_blank" rel="noopener" class="btn-get">领取</a></div>';
+    });
+    document.getElementById('hotList').innerHTML = html;
+}
 
-    document.getElementById('searchInput').addEventListener('input', renderList);
-    </script>
+function showCategory(name) {
+    document.getElementById('dailySection').style.display = 'none';
+    document.getElementById('categorySection').style.display = 'none';
+    document.getElementById('hotSection').style.display = 'none';
+    document.getElementById('listSection').style.display = 'block';
+    document.getElementById('listTitleText').textContent = '📁 ' + name;
+    var cat = categories.filter(function(c){ return c.name === name; })[0];
+    var matchList = cat && cat.match ? cat.match : [name];
+    var items = resources.filter(function(r){ return matchList.indexOf(r.category) !== -1; });
+    renderResourceList(items);
+}
+
+function showHome() {
+    document.getElementById('dailySection').style.display = '';
+    document.getElementById('categorySection').style.display = '';
+    document.getElementById('hotSection').style.display = '';
+    document.getElementById('listSection').style.display = 'none';
+    document.getElementById('searchInput').value = '';
+}
+
+function renderResourceList(items) {
+    var el = document.getElementById('resourceList');
+    var empty = document.getElementById('emptyState');
+    if (items.length === 0) { el.innerHTML = ''; empty.style.display = 'block'; return; }
+    empty.style.display = 'none';
+    var html = '';
+    items.forEach(function(r) {
+        html += '<div class="resource-card"><div class="info">' +
+            '<div class="title">' + r.title + '</div>' +
+            '<div class="desc">' + r.desc + '</div></div>' +
+            '<a href="' + r.link + '" target="_blank" rel="noopener" class="btn-get">领取</a></div>';
+    });
+    el.innerHTML = html;
+}
+
+function doSearch() {
+    var kw = document.getElementById('searchInput').value.trim().toLowerCase();
+    if (!kw) { showHome(); return; }
+    document.getElementById('dailySection').style.display = 'none';
+    document.getElementById('categorySection').style.display = 'none';
+    document.getElementById('hotSection').style.display = 'none';
+    document.getElementById('listSection').style.display = 'block';
+    document.getElementById('listTitleText').textContent = '🔎 搜索结果';
+    var items = resources.filter(function(r) {
+        return r.title.toLowerCase().indexOf(kw) !== -1 ||
+            r.desc.toLowerCase().indexOf(kw) !== -1 ||
+            r.tags.some(function(t){ return t.toLowerCase().indexOf(kw) !== -1; });
+    });
+    renderResourceList(items);
+}
+
+function focusSearch() { document.getElementById('searchInput').focus(); }
+
+function toggleMenu() {
+    document.getElementById('menuOverlay').classList.toggle('show');
+    document.getElementById('menuPanel').classList.toggle('show');
+}
+
+document.getElementById('searchInput').addEventListener('input', doSearch);
+document.getElementById('dailyMore').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('dailySection').style.display = 'none';
+    document.getElementById('categorySection').style.display = 'none';
+    document.getElementById('hotSection').style.display = 'none';
+    document.getElementById('listSection').style.display = 'block';
+    document.getElementById('listTitleText').textContent = '🔥 最近更新';
+    renderResourceList(resources.slice(0, 20));
+});
+
+document.querySelector('.site-name').addEventListener('click', showHome);
+document.querySelector('.site-name').style.cursor = 'pointer';
+
+renderDaily();
+renderCategories();
+renderHot();
+</script>
 </body>
 </html>
