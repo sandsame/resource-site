@@ -10,6 +10,12 @@ var SITE_DATA = {
     { name: "更多资源", icon: "📦" }
   ],
   resources: [
+    {"id": 168, "title": "1.一年级下册", "category": "小学综合", "tags": ["综合", "下册"], "link": "https://pan.quark.cn/s/3913e71eb444", "desc": "1.一年级下册", "date": "2026-05-29"},
+    {"id": 169, "title": "2.二年级下册", "category": "小学综合", "tags": ["综合", "下册"], "link": "https://pan.quark.cn/s/1182a47c0cb5", "desc": "2.二年级下册", "date": "2026-05-29"},
+    {"id": 170, "title": "3.三年级下册", "category": "小学综合", "tags": ["综合", "下册"], "link": "https://pan.quark.cn/s/ec4825d81d07", "desc": "3.三年级下册", "date": "2026-05-29"},
+    {"id": 171, "title": "4.四年级下册", "category": "小学综合", "tags": ["综合", "下册"], "link": "https://pan.quark.cn/s/f7c11fcce570", "desc": "4.四年级下册", "date": "2026-05-29"},
+    {"id": 172, "title": "5.五年级下册", "category": "小学综合", "tags": ["综合", "下册"], "link": "https://pan.quark.cn/s/6ead7672ba39", "desc": "5.五年级下册", "date": "2026-05-29"},
+    {"id": 173, "title": "6.六年级下册（小升初专项）", "category": "小学综合", "tags": ["综合", "下册"], "link": "https://pan.quark.cn/s/d0fa7af18b86", "desc": "6.六年级下册（小升初专项）", "date": "2026-05-29"},
     {"id": 73, "title": "1-6年级数学思维题", "category": "小学数学", "tags": ["数学", "1-6年级"], "link": "https://pan.quark.cn/s/96d7a2fd1c85", "desc": "1-6年级数学思维题", "date": "2026-05-29"},
     {"id": 74, "title": "1-6年级下册预习专项", "category": "小学综合", "tags": ["1-6年级", "下册"], "link": "https://pan.quark.cn/s/8c4789533ef4", "desc": "1-6年级下册预习专项", "date": "2026-05-29"},
     {"id": 75, "title": "26春 典中点 3-6年级英语下（人教精通版）", "category": "小学英语", "tags": ["英语", "人教版", "3-6年级", "下册"], "link": "https://pan.quark.cn/s/bcefe346632a", "desc": "26春 典中点 3-6年级英语下（人教精通版）", "date": "2026-05-29"},
