@@ -11,6 +11,14 @@ var SITE_DATA = {
     { name: "更多资源", icon: "📦" }
   ],
   resources: [
+    {"id": 744, "title": "N 逆转裁判123", "category": "游戏", "tags": ["游戏","安卓","N"], "link": "https://pan.quark.cn/s/46b0673f3854", "desc": "逆转裁判123", "date": "2026-05-29"},
+    {"id": 745, "title": "N 酿造物语 Hundred Days", "category": "游戏", "tags": ["游戏","安卓","N"], "link": "https://pan.quark.cn/s/641daa14b01e", "desc": "酿造物语 Hundred Days", "date": "2026-05-29"},
+    {"id": 746, "title": "N 牛逼实验室", "category": "游戏", "tags": ["游戏","安卓","N"], "link": "https://pan.quark.cn/s/337795ee1c6d", "desc": "牛逼实验室", "date": "2026-05-29"},
+    {"id": 747, "title": "N 你好邻居", "category": "游戏", "tags": ["游戏","安卓","N"], "link": "https://pan.quark.cn/s/4b26f8df4ddc", "desc": "你好邻居", "date": "2026-05-29"},
+    {"id": 748, "title": "N 脑航员2", "category": "游戏", "tags": ["游戏","安卓","N"], "link": "https://pan.quark.cn/s/a8e13838e975", "desc": "脑航员2 意航员2 v1101213", "date": "2026-05-29"},
+    {"id": 749, "title": "N 尼可梦", "category": "游戏", "tags": ["游戏","安卓","N"], "link": "https://pan.quark.cn/s/bc2ab2975c28", "desc": "尼可梦", "date": "2026-05-29"},
+    {"id": 750, "title": "N 鸟语三十 30 Birds", "category": "游戏", "tags": ["游戏","安卓","N"], "link": "https://pan.quark.cn/s/3601807b6ab8", "desc": "鸟语三十 30 Birds", "date": "2026-05-29"},
+    {"id": 751, "title": "N 内在昔日 The Past Within", "category": "游戏", "tags": ["游戏","安卓","N"], "link": "https://pan.quark.cn/s/d7fe5f1519a9", "desc": "内在昔日 The Past Within", "date": "2026-05-29"},
     {"id": 704, "title": "M 喵喵食谱日记", "category": "游戏", "tags": ["游戏","安卓","M"], "link": "https://pan.quark.cn/s/ea6ead79704b", "desc": "喵喵食谱日记", "date": "2026-05-29"},
     {"id": 705, "title": "M 密教模拟器", "category": "游戏", "tags": ["游戏","安卓","M"], "link": "https://pan.quark.cn/s/08a0a060636c", "desc": "密教模拟器", "date": "2026-05-29"},
     {"id": 706, "title": "M 猫与花毯", "category": "游戏", "tags": ["游戏","安卓","M"], "link": "https://pan.quark.cn/s/fe18c8cb733f", "desc": "猫与花毯", "date": "2026-05-29"},
