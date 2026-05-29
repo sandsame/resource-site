@@ -11,6 +11,17 @@ var SITE_DATA = {
     { name: "更多资源", icon: "📦" }
   ],
   resources: [
+    {"id": 298, "title": "六年级语文下册-知识点总结", "category": "小学语文", "tags": ["语文","六年级","下册"], "link": "https://pan.quark.cn/s/143a9a4b8837", "desc": "六年级语文下册知识点总结", "date": "2026-05-29"},
+    {"id": 299, "title": "六年级语文下册-同步练习", "category": "小学语文", "tags": ["语文","六年级","下册"], "link": "https://pan.quark.cn/s/b9f940868f61", "desc": "六年级语文下册同步练习", "date": "2026-05-29"},
+    {"id": 300, "title": "六年级语文下册-单元测试卷", "category": "小学语文", "tags": ["语文","六年级","下册"], "link": "https://pan.quark.cn/s/0df1314e8d50", "desc": "六年级语文下册单元测试卷", "date": "2026-05-29"},
+    {"id": 301, "title": "六年级语文下册-期中测试卷", "category": "小学语文", "tags": ["语文","六年级","下册"], "link": "https://pan.quark.cn/s/49e770fd813d", "desc": "六年级语文下册期中测试卷", "date": "2026-05-29"},
+    {"id": 302, "title": "六年级语文下册-期末测试卷", "category": "小学语文", "tags": ["语文","六年级","下册"], "link": "https://pan.quark.cn/s/230ea66b43ab", "desc": "六年级语文下册期末测试卷", "date": "2026-05-29"},
+    {"id": 303, "title": "六年级语文下册-专项练习", "category": "小学语文", "tags": ["语文","六年级","下册"], "link": "https://pan.quark.cn/s/5bd0f16813b3", "desc": "六年级语文下册专项练习", "date": "2026-05-29"},
+    {"id": 304, "title": "六年级语文下册-字帖书写", "category": "小学语文", "tags": ["语文","六年级","下册"], "link": "https://pan.quark.cn/s/7a3a2e5aeb16", "desc": "六年级语文下册字帖书写", "date": "2026-05-29"},
+    {"id": 305, "title": "六年级语文下册-课件教案", "category": "小学语文", "tags": ["语文","六年级","下册"], "link": "https://pan.quark.cn/s/729e338eacb9", "desc": "六年级语文下册课件教案", "date": "2026-05-29"},
+    {"id": 306, "title": "六年级语文下册-电子课本", "category": "小学语文", "tags": ["语文","六年级","下册"], "link": "https://pan.quark.cn/s/820829b88407", "desc": "六年级语文下册电子课本", "date": "2026-05-29"},
+    {"id": 307, "title": "六年级语文下册-2023更新", "category": "小学语文", "tags": ["语文","六年级","下册"], "link": "https://pan.quark.cn/s/f1e3b6d9ddd0", "desc": "六年级语文下册2023更新资料", "date": "2026-05-29"},
+    {"id": 308, "title": "六年级语文下册-2024更新", "category": "小学语文", "tags": ["语文","六年级","下册"], "link": "https://pan.quark.cn/s/f138df0e9346", "desc": "六年级语文下册2024更新资料", "date": "2026-05-29"},
     {"id": 288, "title": "五年级语文下册-知识点总结", "category": "小学语文", "tags": ["语文","五年级","下册"], "link": "https://pan.quark.cn/s/655572bc42f9", "desc": "五年级语文下册知识点总结", "date": "2026-05-29"},
     {"id": 289, "title": "五年级语文下册-同步练习", "category": "小学语文", "tags": ["语文","五年级","下册"], "link": "https://pan.quark.cn/s/ce81d20eb93f", "desc": "五年级语文下册同步练习", "date": "2026-05-29"},
     {"id": 290, "title": "五年级语文下册-单元测试卷", "category": "小学语文", "tags": ["语文","五年级","下册"], "link": "https://pan.quark.cn/s/663b93e85f41", "desc": "五年级语文下册单元测试卷", "date": "2026-05-29"},
