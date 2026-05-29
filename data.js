@@ -11,6 +11,16 @@ var SITE_DATA = {
     { name: "更多资源", icon: "📦" }
   ],
   resources: [
+    {"id": 247, "title": "一年级语文下册-知识点总结", "category": "小学语文", "tags": ["语文","一年级","下册"], "link": "https://pan.quark.cn/s/0d14d8c5be17", "desc": "一年级语文下册知识点总结", "date": "2026-05-29"},
+    {"id": 248, "title": "一年级语文下册-同步练习", "category": "小学语文", "tags": ["语文","一年级","下册"], "link": "https://pan.quark.cn/s/da26d67c83bb", "desc": "一年级语文下册同步练习", "date": "2026-05-29"},
+    {"id": 249, "title": "一年级语文下册-单元测试卷", "category": "小学语文", "tags": ["语文","一年级","下册"], "link": "https://pan.quark.cn/s/4901f05a8a3c", "desc": "一年级语文下册单元测试卷", "date": "2026-05-29"},
+    {"id": 250, "title": "一年级语文下册-期中测试卷", "category": "小学语文", "tags": ["语文","一年级","下册"], "link": "https://pan.quark.cn/s/c5cae8f231fd", "desc": "一年级语文下册期中测试卷", "date": "2026-05-29"},
+    {"id": 251, "title": "一年级语文下册-期末测试卷", "category": "小学语文", "tags": ["语文","一年级","下册"], "link": "https://pan.quark.cn/s/aada26a89f14", "desc": "一年级语文下册期末测试卷", "date": "2026-05-29"},
+    {"id": 252, "title": "一年级语文下册-专项练习", "category": "小学语文", "tags": ["语文","一年级","下册"], "link": "https://pan.quark.cn/s/f744fdbbcbe2", "desc": "一年级语文下册专项练习", "date": "2026-05-29"},
+    {"id": 253, "title": "一年级语文下册-提升突破卷", "category": "小学语文", "tags": ["语文","一年级","下册"], "link": "https://pan.quark.cn/s/11fe9487608a", "desc": "一年级语文下册提升突破卷", "date": "2026-05-29"},
+    {"id": 254, "title": "一年级语文下册-字帖书写", "category": "小学语文", "tags": ["语文","一年级","下册"], "link": "https://pan.quark.cn/s/f5c7e6e49839", "desc": "一年级语文下册字帖书写", "date": "2026-05-29"},
+    {"id": 255, "title": "一年级语文下册-月考测试卷", "category": "小学语文", "tags": ["语文","一年级","下册"], "link": "https://pan.quark.cn/s/5fd9634c5914", "desc": "一年级语文下册月考测试卷", "date": "2026-05-29"},
+    {"id": 256, "title": "一年级语文下册-电子课本", "category": "小学语文", "tags": ["语文","一年级","下册"], "link": "https://pan.quark.cn/s/fd041177b96e", "desc": "一年级语文下册电子课本", "date": "2026-05-29"},
     {"id": 235, "title": "六年级语文上册-知识点总结", "category": "小学语文", "tags": ["语文","六年级","上册"], "link": "https://pan.quark.cn/s/8c1026159ad1", "desc": "六年级语文上册知识点总结", "date": "2026-05-29"},
     {"id": 236, "title": "六年级语文上册-同步练习", "category": "小学语文", "tags": ["语文","六年级","上册"], "link": "https://pan.quark.cn/s/5dddf876e006", "desc": "六年级语文上册同步练习", "date": "2026-05-29"},
     {"id": 237, "title": "六年级语文上册-单元测试卷", "category": "小学语文", "tags": ["语文","六年级","上册"], "link": "https://pan.quark.cn/s/c93528ef1269", "desc": "六年级语文上册单元测试卷", "date": "2026-05-29"},
