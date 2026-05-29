@@ -442,6 +442,33 @@ function showCategory(name) {
                 renderResourceList(filtered);
             }
         };
+    } else if (name === '古籍电子书') {
+        var tagNames = [];
+        items.forEach(function(r) {
+            r.tags.forEach(function(t) {
+                if (t !== '古籍' && tagNames.indexOf(t) === -1) tagNames.push(t);
+            });
+        });
+        var tabs = ['全部'].concat(tagNames);
+        var html = '';
+        tabs.forEach(function(g, i) {
+            html += '<button class="grade-tab' + (i === 0 ? ' active' : '') + '" data-grade="' + g + '">' + g + '</button>';
+        });
+        tabsEl.innerHTML = html;
+        tabsEl.style.display = 'flex';
+        tabsEl.onclick = function(e) {
+            var btn = e.target.closest('.grade-tab');
+            if (!btn) return;
+            tabsEl.querySelectorAll('.grade-tab').forEach(function(b){ b.classList.remove('active'); });
+            btn.classList.add('active');
+            var tag = btn.getAttribute('data-grade');
+            if (tag === '全部') {
+                renderResourceList(items);
+            } else {
+                var filtered = items.filter(function(r){ return r.tags.indexOf(tag) !== -1; });
+                renderResourceList(filtered);
+            }
+        };
     } else {
         tabsEl.style.display = 'none';
     }
