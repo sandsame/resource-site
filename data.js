@@ -11,6 +11,16 @@ var SITE_DATA = {
     { name: "更多资源", icon: "📦" }
   ],
   resources: [
+    {"id": 278, "title": "四年级语文下册-知识点总结", "category": "小学语文", "tags": ["语文","四年级","下册"], "link": "https://pan.quark.cn/s/ccd7061da190", "desc": "四年级语文下册知识点总结", "date": "2026-05-29"},
+    {"id": 279, "title": "四年级语文下册-同步练习", "category": "小学语文", "tags": ["语文","四年级","下册"], "link": "https://pan.quark.cn/s/c4e7df5b1ca4", "desc": "四年级语文下册同步练习", "date": "2026-05-29"},
+    {"id": 280, "title": "四年级语文下册-单元测试卷", "category": "小学语文", "tags": ["语文","四年级","下册"], "link": "https://pan.quark.cn/s/f2959b66bd58", "desc": "四年级语文下册单元测试卷", "date": "2026-05-29"},
+    {"id": 281, "title": "四年级语文下册-期中测试卷", "category": "小学语文", "tags": ["语文","四年级","下册"], "link": "https://pan.quark.cn/s/1ebcd0305a07", "desc": "四年级语文下册期中测试卷", "date": "2026-05-29"},
+    {"id": 282, "title": "四年级语文下册-期末测试卷", "category": "小学语文", "tags": ["语文","四年级","下册"], "link": "https://pan.quark.cn/s/8b9ad2620e66", "desc": "四年级语文下册期末测试卷", "date": "2026-05-29"},
+    {"id": 283, "title": "四年级语文下册-专项练习", "category": "小学语文", "tags": ["语文","四年级","下册"], "link": "https://pan.quark.cn/s/6051ed222769", "desc": "四年级语文下册专项练习", "date": "2026-05-29"},
+    {"id": 284, "title": "四年级语文下册-字帖书写", "category": "小学语文", "tags": ["语文","四年级","下册"], "link": "https://pan.quark.cn/s/55e3a981162c", "desc": "四年级语文下册字帖书写", "date": "2026-05-29"},
+    {"id": 285, "title": "四年级语文下册-电子课本", "category": "小学语文", "tags": ["语文","四年级","下册"], "link": "https://pan.quark.cn/s/5595dcfdfb3a", "desc": "四年级语文下册电子课本", "date": "2026-05-29"},
+    {"id": 286, "title": "四年级语文下册-2023更新", "category": "小学语文", "tags": ["语文","四年级","下册"], "link": "https://pan.quark.cn/s/33d770df46f8", "desc": "四年级语文下册2023更新资料", "date": "2026-05-29"},
+    {"id": 287, "title": "四年级语文下册-2024更新", "category": "小学语文", "tags": ["语文","四年级","下册"], "link": "https://pan.quark.cn/s/1c39f276f680", "desc": "四年级语文下册2024更新资料", "date": "2026-05-29"},
     {"id": 266, "title": "三年级语文下册-知识点总结", "category": "小学语文", "tags": ["语文","三年级","下册"], "link": "https://pan.quark.cn/s/99cb42956e2a", "desc": "三年级语文下册知识点总结", "date": "2026-05-29"},
     {"id": 267, "title": "三年级语文下册-同步练习", "category": "小学语文", "tags": ["语文","三年级","下册"], "link": "https://pan.quark.cn/s/6e83487d5fbb", "desc": "三年级语文下册同步练习", "date": "2026-05-29"},
     {"id": 268, "title": "三年级语文下册-单元测试卷", "category": "小学语文", "tags": ["语文","三年级","下册"], "link": "https://pan.quark.cn/s/f53410890c31", "desc": "三年级语文下册单元测试卷", "date": "2026-05-29"},
