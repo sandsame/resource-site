@@ -519,7 +519,7 @@ function copyLink(link, e) {
     });
     var name = link.indexOf('quark') !== -1 ? '夸克网盘' : '网盘';
     showToast('已复制链接，打开' + name + '即可保存下载');
-    setTimeout(function(){ window.open(link, '_blank'); }, 2500);
+    setTimeout(function(){ window.location.href = link; }, 2500);
 }
 
 function showToast(msg) {
