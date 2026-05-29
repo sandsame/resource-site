@@ -11,6 +11,17 @@ var SITE_DATA = {
     { name: "更多资源", icon: "📦" }
   ],
   resources: [
+    {"id": 202, "title": "三年级语文上册-知识点总结", "category": "小学语文", "tags": ["语文","三年级","上册"], "link": "https://pan.quark.cn/s/04f7ca7ee55b", "desc": "三年级语文上册知识点总结", "date": "2026-05-29"},
+    {"id": 203, "title": "三年级语文上册-同步练习", "category": "小学语文", "tags": ["语文","三年级","上册"], "link": "https://pan.quark.cn/s/7043564a72e7", "desc": "三年级语文上册同步练习", "date": "2026-05-29"},
+    {"id": 204, "title": "三年级语文上册-单元测试卷", "category": "小学语文", "tags": ["语文","三年级","上册"], "link": "https://pan.quark.cn/s/53448d5bb016", "desc": "三年级语文上册单元测试卷", "date": "2026-05-29"},
+    {"id": 205, "title": "三年级语文上册-期中测试卷", "category": "小学语文", "tags": ["语文","三年级","上册"], "link": "https://pan.quark.cn/s/e1ee476dd3aa", "desc": "三年级语文上册期中测试卷", "date": "2026-05-29"},
+    {"id": 206, "title": "三年级语文上册-期末测试卷", "category": "小学语文", "tags": ["语文","三年级","上册"], "link": "https://pan.quark.cn/s/33bfae3ab0fc", "desc": "三年级语文上册期末测试卷", "date": "2026-05-29"},
+    {"id": 207, "title": "三年级语文上册-专项练习", "category": "小学语文", "tags": ["语文","三年级","上册"], "link": "https://pan.quark.cn/s/3339c47ae282", "desc": "三年级语文上册专项练习", "date": "2026-05-29"},
+    {"id": 208, "title": "三年级语文上册-字帖书写", "category": "小学语文", "tags": ["语文","三年级","上册"], "link": "https://pan.quark.cn/s/8292aecdbd65", "desc": "三年级语文上册字帖书写", "date": "2026-05-29"},
+    {"id": 209, "title": "三年级语文上册-课件教案", "category": "小学语文", "tags": ["语文","三年级","上册"], "link": "https://pan.quark.cn/s/3fb263852c30", "desc": "三年级语文上册课件教案", "date": "2026-05-29"},
+    {"id": 210, "title": "三年级语文上册-电子课本", "category": "小学语文", "tags": ["语文","三年级","上册"], "link": "https://pan.quark.cn/s/86c94fcf0b9d", "desc": "三年级语文上册电子课本", "date": "2026-05-29"},
+    {"id": 211, "title": "三年级语文上册-2023更新", "category": "小学语文", "tags": ["语文","三年级","上册"], "link": "https://pan.quark.cn/s/18f1589eeb75", "desc": "三年级语文上册2023更新资料", "date": "2026-05-29"},
+    {"id": 212, "title": "三年级语文上册-2024新增", "category": "小学语文", "tags": ["语文","三年级","上册"], "link": "https://pan.quark.cn/s/13bb14dc33e4", "desc": "三年级语文上册2024新增资料", "date": "2026-05-29"},
     {"id": 193, "title": "二年级语文上册-知识点总结", "category": "小学语文", "tags": ["语文","二年级","上册"], "link": "https://pan.quark.cn/s/90c9f4f4a378", "desc": "二年级语文上册知识点总结", "date": "2026-05-29"},
     {"id": 194, "title": "二年级语文上册-同步练习", "category": "小学语文", "tags": ["语文","二年级","上册"], "link": "https://pan.quark.cn/s/8ae725190ec8", "desc": "二年级语文上册同步练习", "date": "2026-05-29"},
     {"id": 195, "title": "二年级语文上册-单元测试卷", "category": "小学语文", "tags": ["语文","二年级","上册"], "link": "https://pan.quark.cn/s/bf348d17ac1e", "desc": "二年级语文上册单元测试卷", "date": "2026-05-29"},
