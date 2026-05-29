@@ -415,6 +415,31 @@ function showCategory(name) {
                 renderResourceList(filtered);
             }
         };
+    } else if (name === '游戏') {
+        var letters = ['全部','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','其他'];
+        var allLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+        var html = '';
+        letters.forEach(function(g, i) {
+            html += '<button class="grade-tab' + (i === 0 ? ' active' : '') + '" data-grade="' + g + '">' + g + '</button>';
+        });
+        tabsEl.innerHTML = html;
+        tabsEl.style.display = 'flex';
+        tabsEl.onclick = function(e) {
+            var btn = e.target.closest('.grade-tab');
+            if (!btn) return;
+            tabsEl.querySelectorAll('.grade-tab').forEach(function(b){ b.classList.remove('active'); });
+            btn.classList.add('active');
+            var letter = btn.getAttribute('data-grade');
+            if (letter === '全部') {
+                renderResourceList(items);
+            } else if (letter === '其他') {
+                var filtered = items.filter(function(r){ return !allLetters.some(function(l){ return r.tags.indexOf(l) !== -1; }); });
+                renderResourceList(filtered);
+            } else {
+                var filtered = items.filter(function(r){ return r.tags.indexOf(letter) !== -1; });
+                renderResourceList(filtered);
+            }
+        };
     } else {
         tabsEl.style.display = 'none';
     }
