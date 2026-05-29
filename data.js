@@ -11,6 +11,16 @@ var SITE_DATA = {
     { name: "更多资源", icon: "📦" }
   ],
   resources: [
+    {"id": 183, "title": "一年级语文上册-知识点总结", "category": "小学语文", "tags": ["语文","一年级","上册"], "link": "https://pan.quark.cn/s/7247097996de", "desc": "一年级语文上册知识点总结", "date": "2026-05-29"},
+    {"id": 184, "title": "一年级语文上册-同步练习", "category": "小学语文", "tags": ["语文","一年级","上册"], "link": "https://pan.quark.cn/s/dec03fefa899", "desc": "一年级语文上册同步练习", "date": "2026-05-29"},
+    {"id": 185, "title": "一年级语文上册-单元测试卷", "category": "小学语文", "tags": ["语文","一年级","上册"], "link": "https://pan.quark.cn/s/feb7494611bf", "desc": "一年级语文上册单元测试卷", "date": "2026-05-29"},
+    {"id": 186, "title": "一年级语文上册-期中测试卷", "category": "小学语文", "tags": ["语文","一年级","上册"], "link": "https://pan.quark.cn/s/ce7184a28a8e", "desc": "一年级语文上册期中测试卷", "date": "2026-05-29"},
+    {"id": 187, "title": "一年级语文上册-期末测试卷", "category": "小学语文", "tags": ["语文","一年级","上册"], "link": "https://pan.quark.cn/s/8e9434757c7d", "desc": "一年级语文上册期末测试卷", "date": "2026-05-29"},
+    {"id": 188, "title": "一年级语文上册-专项练习", "category": "小学语文", "tags": ["语文","一年级","上册"], "link": "https://pan.quark.cn/s/3537feff91c9", "desc": "一年级语文上册专项练习", "date": "2026-05-29"},
+    {"id": 189, "title": "一年级语文上册-字帖书写", "category": "小学语文", "tags": ["语文","一年级","上册"], "link": "https://pan.quark.cn/s/5a5322296530", "desc": "一年级语文上册字帖书写", "date": "2026-05-29"},
+    {"id": 190, "title": "一年级语文上册-课件教案", "category": "小学语文", "tags": ["语文","一年级","上册"], "link": "https://pan.quark.cn/s/24a1e25ec810", "desc": "一年级语文上册课件教案", "date": "2026-05-29"},
+    {"id": 191, "title": "一年级语文上册-2023新增", "category": "小学语文", "tags": ["语文","一年级","上册"], "link": "https://pan.quark.cn/s/f7eccec18371", "desc": "一年级语文上册2023新增资料", "date": "2026-05-29"},
+    {"id": 192, "title": "一年级语文上册-2024新增", "category": "小学语文", "tags": ["语文","一年级","上册"], "link": "https://pan.quark.cn/s/4adf762ca2ee", "desc": "一年级语文上册2024新增资料", "date": "2026-05-29"},
     {"id": 179, "title": "1979革命 黑色星期五  [汉化版]Steam移植", "category": "游戏", "tags": ["游戏", "安卓"], "link": "https://pan.quark.cn/s/dce235bf3e88", "desc": "1979革命 黑色星期五  [汉化版]Steam移植", "date": "2026-05-29"},
     {"id": 180, "title": "3D天堂岛", "category": "游戏", "tags": ["游戏", "安卓"], "link": "https://pan.quark.cn/s/6edb9c3032d7", "desc": "3D天堂岛", "date": "2026-05-29"},
     {"id": 181, "title": "60秒", "category": "游戏", "tags": ["游戏", "安卓"], "link": "https://pan.quark.cn/s/02795f0ddb28", "desc": "60秒", "date": "2026-05-29"},
