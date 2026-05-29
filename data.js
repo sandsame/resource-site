@@ -11,6 +11,15 @@ var SITE_DATA = {
     { name: "更多资源", icon: "📦" }
   ],
   resources: [
+    {"id": 193, "title": "二年级语文上册-知识点总结", "category": "小学语文", "tags": ["语文","二年级","上册"], "link": "https://pan.quark.cn/s/90c9f4f4a378", "desc": "二年级语文上册知识点总结", "date": "2026-05-29"},
+    {"id": 194, "title": "二年级语文上册-同步练习", "category": "小学语文", "tags": ["语文","二年级","上册"], "link": "https://pan.quark.cn/s/8ae725190ec8", "desc": "二年级语文上册同步练习", "date": "2026-05-29"},
+    {"id": 195, "title": "二年级语文上册-单元测试卷", "category": "小学语文", "tags": ["语文","二年级","上册"], "link": "https://pan.quark.cn/s/bf348d17ac1e", "desc": "二年级语文上册单元测试卷", "date": "2026-05-29"},
+    {"id": 196, "title": "二年级语文上册-期中测试卷", "category": "小学语文", "tags": ["语文","二年级","上册"], "link": "https://pan.quark.cn/s/239057c1227b", "desc": "二年级语文上册期中测试卷", "date": "2026-05-29"},
+    {"id": 197, "title": "二年级语文上册-期末测试卷", "category": "小学语文", "tags": ["语文","二年级","上册"], "link": "https://pan.quark.cn/s/b6d16945c3f4", "desc": "二年级语文上册期末测试卷", "date": "2026-05-29"},
+    {"id": 198, "title": "二年级语文上册-专项练习", "category": "小学语文", "tags": ["语文","二年级","上册"], "link": "https://pan.quark.cn/s/2b1f1aa47ee3", "desc": "二年级语文上册专项练习", "date": "2026-05-29"},
+    {"id": 199, "title": "二年级语文上册-字帖书写", "category": "小学语文", "tags": ["语文","二年级","上册"], "link": "https://pan.quark.cn/s/6a59f2a40ee5", "desc": "二年级语文上册字帖书写", "date": "2026-05-29"},
+    {"id": 200, "title": "二年级语文上册-课件教案", "category": "小学语文", "tags": ["语文","二年级","上册"], "link": "https://pan.quark.cn/s/00bf94fe2942", "desc": "二年级语文上册课件教案", "date": "2026-05-29"},
+    {"id": 201, "title": "二年级语文上册-电子课本", "category": "小学语文", "tags": ["语文","二年级","上册"], "link": "https://pan.quark.cn/s/acee2ac7d1c0", "desc": "二年级语文上册电子课本", "date": "2026-05-29"},
     {"id": 183, "title": "一年级语文上册-知识点总结", "category": "小学语文", "tags": ["语文","一年级","上册"], "link": "https://pan.quark.cn/s/7247097996de", "desc": "一年级语文上册知识点总结", "date": "2026-05-29"},
     {"id": 184, "title": "一年级语文上册-同步练习", "category": "小学语文", "tags": ["语文","一年级","上册"], "link": "https://pan.quark.cn/s/dec03fefa899", "desc": "一年级语文上册同步练习", "date": "2026-05-29"},
     {"id": 185, "title": "一年级语文上册-单元测试卷", "category": "小学语文", "tags": ["语文","一年级","上册"], "link": "https://pan.quark.cn/s/feb7494611bf", "desc": "一年级语文上册单元测试卷", "date": "2026-05-29"},
