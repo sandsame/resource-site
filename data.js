@@ -11,6 +11,13 @@ var SITE_DATA = {
     { name: "更多资源", icon: "📦" }
   ],
   resources: [
+    {"id": 796, "title": "R 人生画廊 Life Gallery", "category": "游戏", "tags": ["游戏","安卓","R"], "link": "https://pan.quark.cn/s/553a437aefd6", "desc": "人生画廊 Life Gallery", "date": "2026-05-29"},
+    {"id": 797, "title": "R Resolutiion", "category": "游戏", "tags": ["游戏","安卓","R"], "link": "https://pan.quark.cn/s/64aca175ee4e", "desc": "Resolutiion", "date": "2026-05-29"},
+    {"id": 798, "title": "R 人类黎明", "category": "游戏", "tags": ["游戏","安卓","R"], "link": "https://pan.quark.cn/s/d2722cf9d2c9", "desc": "人类黎明", "date": "2026-05-29"},
+    {"id": 799, "title": "R 热血硬派国夫君外传 热血少女", "category": "游戏", "tags": ["游戏","安卓","R"], "link": "https://pan.quark.cn/s/1db8b544ad3c", "desc": "热血硬派国夫君外传 热血少女", "date": "2026-05-29"},
+    {"id": 800, "title": "R 人渣scum", "category": "游戏", "tags": ["游戏","安卓","R"], "link": "https://pan.quark.cn/s/9f94c04402b5", "desc": "人渣scum", "date": "2026-05-29"},
+    {"id": 801, "title": "R 忍者神龟施莱德的复仇", "category": "游戏", "tags": ["游戏","安卓","R"], "link": "https://pan.quark.cn/s/6e9928fab170", "desc": "忍者神龟施莱德的复仇", "date": "2026-05-29"},
+    {"id": 802, "title": "R 燃之智3.3最终汉化", "category": "游戏", "tags": ["游戏","安卓","R"], "link": "https://pan.quark.cn/s/2760acbd4573", "desc": "燃之智3.3最终汉化", "date": "2026-05-29"},
     {"id": 768, "title": "Q 轻物心语", "category": "游戏", "tags": ["游戏","安卓","Q"], "link": "https://pan.quark.cn/s/116e5870e58d", "desc": "轻物心语", "date": "2026-05-29"},
     {"id": 769, "title": "Q 桥梁建筑师：传送门", "category": "游戏", "tags": ["游戏","安卓","Q"], "link": "https://pan.quark.cn/s/58cd1f2ae489", "desc": "桥梁建筑师：传送门", "date": "2026-05-29"},
     {"id": 770, "title": "Q 气球塔防6", "category": "游戏", "tags": ["游戏","安卓","Q"], "link": "https://pan.quark.cn/s/2b052b98bc4b", "desc": "气球塔防6", "date": "2026-05-29"},
