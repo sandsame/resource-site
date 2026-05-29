@@ -11,6 +11,14 @@ var SITE_DATA = {
     { name: "更多资源", icon: "📦" }
   ],
   resources: [
+    {"id": 508, "title": "E ELOH", "category": "游戏", "tags": ["游戏","安卓","E"], "link": "https://pan.quark.cn/s/4d1d050f43a6", "desc": "ELOH", "date": "2026-05-29"},
+    {"id": 509, "title": "E Evil Cogs", "category": "游戏", "tags": ["游戏","安卓","E"], "link": "https://pan.quark.cn/s/685a7e4652c6", "desc": "Evil Cogs", "date": "2026-05-29"},
+    {"id": 510, "title": "E 鹅作剧", "category": "游戏", "tags": ["游戏","安卓","E"], "link": "https://pan.quark.cn/s/2ee49576f29e", "desc": "鹅作剧", "date": "2026-05-29"},
+    {"id": 511, "title": "E 蛾湖诡谜", "category": "游戏", "tags": ["游戏","安卓","E"], "link": "https://pan.quark.cn/s/c0db9e39942f", "desc": "蛾湖诡谜", "date": "2026-05-29"},
+    {"id": 512, "title": "E 恶魔轮盘", "category": "游戏", "tags": ["游戏","安卓","E"], "link": "https://pan.quark.cn/s/0d294be593ed", "desc": "恶魔轮盘", "date": "2026-05-29"},
+    {"id": 513, "title": "E 鳄鱼侦探布罗格", "category": "游戏", "tags": ["游戏","安卓","E"], "link": "https://pan.quark.cn/s/a7a8352784cc", "desc": "鳄鱼侦探布罗格", "date": "2026-05-29"},
+    {"id": 514, "title": "E 二战名将-世界战", "category": "游戏", "tags": ["游戏","安卓","E"], "link": "https://pan.quark.cn/s/57b415e49e77", "desc": "二战名将-世界战", "date": "2026-05-29"},
+    {"id": 515, "title": "E 二战战斗模拟器", "category": "游戏", "tags": ["游戏","安卓","E"], "link": "https://pan.quark.cn/s/62d5aa9dff40", "desc": "二战战斗模拟器", "date": "2026-05-29"},
     {"id": 453, "title": "D Dark dome 隐秘小镇", "category": "游戏", "tags": ["游戏","安卓","D"], "link": "https://pan.quark.cn/s/d4555c43688a", "desc": "Dark dome 隐秘小镇", "date": "2026-05-29"},
     {"id": 454, "title": "D 捣蛋鬼大脚怪", "category": "游戏", "tags": ["游戏","安卓","D"], "link": "https://pan.quark.cn/s/9d48ed0d36bd", "desc": "捣蛋鬼大脚怪", "date": "2026-05-29"},
     {"id": 455, "title": "D 低模之战", "category": "游戏", "tags": ["游戏","安卓","D"], "link": "https://pan.quark.cn/s/e4f57ae4e77d", "desc": "低模之战", "date": "2026-05-29"},
