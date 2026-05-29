@@ -193,13 +193,13 @@ body {
 }
 .toast {
     position: fixed;
-    bottom: 80px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     background: rgba(0,0,0,0.85);
     color: #fff;
-    padding: 14px 28px;
-    border-radius: 24px;
+    padding: 16px 32px;
+    border-radius: 12px;
     font-size: 16px;
     font-weight: 500;
     z-index: 9999;
@@ -526,7 +526,6 @@ document.querySelector('.site-name').addEventListener('click', showHome);
 document.querySelector('.site-name').style.cursor = 'pointer';
 
 function copyLink(link, e) {
-    if (e) e.preventDefault();
     navigator.clipboard.writeText(link).catch(function(){
         var t = document.createElement('textarea');
         t.value = link;
@@ -537,7 +536,6 @@ function copyLink(link, e) {
     });
     var name = link.indexOf('quark') !== -1 ? '夸克网盘' : '网盘';
     showToast('已复制链接，打开' + name + '即可保存下载');
-    setTimeout(function(){ window.open(link, '_blank'); }, 2000);
 }
 
 function showToast(msg) {
