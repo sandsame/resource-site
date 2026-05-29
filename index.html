@@ -391,7 +391,8 @@ function showCategory(name) {
     var items = resources.filter(function(r){ return matchList.indexOf(r.category) !== -1; });
     var tabsEl = document.getElementById('gradeTabs');
     if (name === '小学资料') {
-        var grades = ['全部','一年级','二年级','三年级','四年级','五年级','六年级'];
+        var grades = ['全部','一年级','二年级','三年级','四年级','五年级','六年级','其他'];
+        var allGradeKeys = ['一年级','二年级','三年级','四年级','五年级','六年级'];
         var html = '';
         grades.forEach(function(g, i) {
             html += '<button class="grade-tab' + (i === 0 ? ' active' : '') + '" data-grade="' + g + '">' + g + '</button>';
@@ -406,6 +407,9 @@ function showCategory(name) {
             var grade = btn.getAttribute('data-grade');
             if (grade === '全部') {
                 renderResourceList(items);
+            } else if (grade === '其他') {
+                var filtered = items.filter(function(r){ return !allGradeKeys.some(function(k){ return r.title.indexOf(k) !== -1 || r.tags.indexOf(k) !== -1; }); });
+                renderResourceList(filtered);
             } else {
                 var filtered = items.filter(function(r){ return r.title.indexOf(grade) !== -1 || r.tags.indexOf(grade) !== -1; });
                 renderResourceList(filtered);
