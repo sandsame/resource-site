@@ -196,11 +196,12 @@ body {
     bottom: 80px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(0,0,0,0.78);
+    background: rgba(0,0,0,0.85);
     color: #fff;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 13px;
+    padding: 14px 28px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 500;
     z-index: 9999;
     opacity: 0;
     transition: opacity 0.3s;
@@ -393,7 +394,7 @@ function renderHot() {
         html += '<div class="hot-card"><div class="info">' +
             '<div class="title">' + r.title + '</div>' +
             '<div class="desc">' + r.desc + '</div></div>' +
-            '<a href="' + r.link + '" target="_blank" rel="noopener" onclick="copyLink(\'' + r.link + '\')" class="btn-get">领取</a></div>';
+            '<a href="' + r.link + '" target="_blank" rel="noopener" onclick="copyLink(\'' + r.link + '\', event)" class="btn-get">领取</a></div>';
     });
     document.getElementById('hotList').innerHTML = html;
 }
@@ -482,7 +483,7 @@ function renderResourceList(items) {
         html += '<div class="resource-card"><div class="info">' +
             '<div class="title">' + r.title + '</div>' +
             '<div class="desc">' + r.desc + '</div></div>' +
-            '<a href="' + r.link + '" target="_blank" rel="noopener" onclick="copyLink(\'' + r.link + '\')" class="btn-get">领取</a></div>';
+            '<a href="' + r.link + '" target="_blank" rel="noopener" onclick="copyLink(\'' + r.link + '\', event)" class="btn-get">领取</a></div>';
     });
     el.innerHTML = html;
 }
@@ -524,7 +525,8 @@ document.getElementById('dailyMore').addEventListener('click', function(e) {
 document.querySelector('.site-name').addEventListener('click', showHome);
 document.querySelector('.site-name').style.cursor = 'pointer';
 
-function copyLink(link) {
+function copyLink(link, e) {
+    if (e) e.preventDefault();
     navigator.clipboard.writeText(link).catch(function(){
         var t = document.createElement('textarea');
         t.value = link;
@@ -535,6 +537,7 @@ function copyLink(link) {
     });
     var name = link.indexOf('quark') !== -1 ? '夸克网盘' : '网盘';
     showToast('已复制链接，打开' + name + '即可保存下载');
+    setTimeout(function(){ window.open(link, '_blank'); }, 2000);
 }
 
 function showToast(msg) {
