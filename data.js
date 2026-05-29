@@ -11,6 +11,17 @@ var SITE_DATA = {
     { name: "更多资源", icon: "📦" }
   ],
   resources: [
+    {"id": 224, "title": "五年级语文上册-知识点总结", "category": "小学语文", "tags": ["语文","五年级","上册"], "link": "https://pan.quark.cn/s/454fb451204a", "desc": "五年级语文上册知识点总结", "date": "2026-05-29"},
+    {"id": 225, "title": "五年级语文上册-同步练习", "category": "小学语文", "tags": ["语文","五年级","上册"], "link": "https://pan.quark.cn/s/f68ba9c2d03a", "desc": "五年级语文上册同步练习", "date": "2026-05-29"},
+    {"id": 226, "title": "五年级语文上册-单元测试卷", "category": "小学语文", "tags": ["语文","五年级","上册"], "link": "https://pan.quark.cn/s/863d6dfe986e", "desc": "五年级语文上册单元测试卷", "date": "2026-05-29"},
+    {"id": 227, "title": "五年级语文上册-期中测试卷", "category": "小学语文", "tags": ["语文","五年级","上册"], "link": "https://pan.quark.cn/s/8869bff0a6e0", "desc": "五年级语文上册期中测试卷", "date": "2026-05-29"},
+    {"id": 228, "title": "五年级语文上册-期末测试卷", "category": "小学语文", "tags": ["语文","五年级","上册"], "link": "https://pan.quark.cn/s/d3e3ef2cdb26", "desc": "五年级语文上册期末测试卷", "date": "2026-05-29"},
+    {"id": 229, "title": "五年级语文上册-专项练习", "category": "小学语文", "tags": ["语文","五年级","上册"], "link": "https://pan.quark.cn/s/11e2bb43f5cb", "desc": "五年级语文上册专项练习", "date": "2026-05-29"},
+    {"id": 230, "title": "五年级语文上册-字帖书写", "category": "小学语文", "tags": ["语文","五年级","上册"], "link": "https://pan.quark.cn/s/5a5c2d0d724f", "desc": "五年级语文上册字帖书写", "date": "2026-05-29"},
+    {"id": 231, "title": "五年级语文上册-课件教案", "category": "小学语文", "tags": ["语文","五年级","上册"], "link": "https://pan.quark.cn/s/d2af31ed2efd", "desc": "五年级语文上册课件教案", "date": "2026-05-29"},
+    {"id": 232, "title": "五年级语文上册-电子课本", "category": "小学语文", "tags": ["语文","五年级","上册"], "link": "https://pan.quark.cn/s/0e75ff76c9f2", "desc": "五年级语文上册电子课本", "date": "2026-05-29"},
+    {"id": 233, "title": "五年级语文上册-2023更新", "category": "小学语文", "tags": ["语文","五年级","上册"], "link": "https://pan.quark.cn/s/5a4c023c98f5", "desc": "五年级语文上册2023更新资料", "date": "2026-05-29"},
+    {"id": 234, "title": "五年级语文上册-2024新增", "category": "小学语文", "tags": ["语文","五年级","上册"], "link": "https://pan.quark.cn/s/b4539dff9e2f", "desc": "五年级语文上册2024新增资料", "date": "2026-05-29"},
     {"id": 213, "title": "四年级语文上册-知识点总结", "category": "小学语文", "tags": ["语文","四年级","上册"], "link": "https://pan.quark.cn/s/5726ba19f146", "desc": "四年级语文上册知识点总结", "date": "2026-05-29"},
     {"id": 214, "title": "四年级语文上册-同步练习", "category": "小学语文", "tags": ["语文","四年级","上册"], "link": "https://pan.quark.cn/s/fa0ae1893a43", "desc": "四年级语文上册同步练习", "date": "2026-05-29"},
     {"id": 215, "title": "四年级语文上册-单元测试卷", "category": "小学语文", "tags": ["语文","四年级","上册"], "link": "https://pan.quark.cn/s/5ccb50cadf59", "desc": "四年级语文上册单元测试卷", "date": "2026-05-29"},
