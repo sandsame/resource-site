@@ -191,6 +191,23 @@ body {
     flex-direction: column;
     gap: 4px;
 }
+.toast {
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.78);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 13px;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+.toast.show { opacity: 1; }
 .menu-overlay {
     display: none;
     position: fixed;
@@ -316,6 +333,7 @@ body {
     <h3>资料分类</h3>
     <div id="menuLinks"></div>
 </div>
+<div class="toast" id="toast"></div>
 <script src="data.js"></script>
 <script>
 var data = SITE_DATA;
@@ -375,7 +393,7 @@ function renderHot() {
         html += '<div class="hot-card"><div class="info">' +
             '<div class="title">' + r.title + '</div>' +
             '<div class="desc">' + r.desc + '</div></div>' +
-            '<a href="' + r.link + '" target="_blank" rel="noopener" class="btn-get">领取</a></div>';
+            '<a href="' + r.link + '" target="_blank" rel="noopener" onclick="copyLink(\'' + r.link + '\')" class="btn-get">领取</a></div>';
     });
     document.getElementById('hotList').innerHTML = html;
 }
@@ -464,7 +482,7 @@ function renderResourceList(items) {
         html += '<div class="resource-card"><div class="info">' +
             '<div class="title">' + r.title + '</div>' +
             '<div class="desc">' + r.desc + '</div></div>' +
-            '<a href="' + r.link + '" target="_blank" rel="noopener" class="btn-get">领取</a></div>';
+            '<a href="' + r.link + '" target="_blank" rel="noopener" onclick="copyLink(\'' + r.link + '\')" class="btn-get">领取</a></div>';
     });
     el.innerHTML = html;
 }
@@ -505,6 +523,27 @@ document.getElementById('dailyMore').addEventListener('click', function(e) {
 
 document.querySelector('.site-name').addEventListener('click', showHome);
 document.querySelector('.site-name').style.cursor = 'pointer';
+
+function copyLink(link) {
+    navigator.clipboard.writeText(link).catch(function(){
+        var t = document.createElement('textarea');
+        t.value = link;
+        document.body.appendChild(t);
+        t.select();
+        document.execCommand('copy');
+        document.body.removeChild(t);
+    });
+    var name = link.indexOf('quark') !== -1 ? '夸克网盘' : '网盘';
+    showToast('已复制链接，打开' + name + '即可保存下载');
+}
+
+function showToast(msg) {
+    var el = document.getElementById('toast');
+    el.textContent = msg;
+    el.classList.add('show');
+    clearTimeout(el._timer);
+    el._timer = setTimeout(function(){ el.classList.remove('show'); }, 2500);
+}
 
 renderDaily();
 renderCategories();
