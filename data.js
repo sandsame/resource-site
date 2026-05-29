@@ -11,6 +11,7 @@ var SITE_DATA = {
     { name: "更多资源", icon: "📦" }
   ],
   resources: [
+    {"id": 752, "title": "O OPUS：灵魂之桥", "category": "游戏", "tags": ["游戏","安卓","O"], "link": "https://pan.quark.cn/s/879fa648c69a", "desc": "OPUS：灵魂之桥", "date": "2026-05-29"},
     {"id": 744, "title": "N 逆转裁判123", "category": "游戏", "tags": ["游戏","安卓","N"], "link": "https://pan.quark.cn/s/46b0673f3854", "desc": "逆转裁判123", "date": "2026-05-29"},
     {"id": 745, "title": "N 酿造物语 Hundred Days", "category": "游戏", "tags": ["游戏","安卓","N"], "link": "https://pan.quark.cn/s/641daa14b01e", "desc": "酿造物语 Hundred Days", "date": "2026-05-29"},
     {"id": 746, "title": "N 牛逼实验室", "category": "游戏", "tags": ["游戏","安卓","N"], "link": "https://pan.quark.cn/s/337795ee1c6d", "desc": "牛逼实验室", "date": "2026-05-29"},
