@@ -343,7 +343,7 @@ function renderDaily() {
     if (recent.length === 0) recent = resources.slice(0, 8);
     var html = '';
     recent.forEach(function(r, i) {
-        html += '<a href="' + r.link + '" target="_blank" rel="noopener" class="daily-item">' +
+        html += '<a href="' + r.link + '" rel="noopener" class="daily-item">' +
             '<span class="date">' + formatDate(r.date) + '</span>' +
             '<span class="title">' + r.title + '</span>' +
             (i < 2 ? '<span class="badge-new">NEW</span>' : '') +
