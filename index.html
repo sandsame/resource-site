@@ -8,10 +8,10 @@
     <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-    background: #f5f6fa;
+    font-family: "Microsoft YaHei", "微软雅黑", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #fafafa;
     color: #333;
-    line-height: 1.5;
+    line-height: 1.6;
     font-size: 15px;
     -webkit-tap-highlight-color: transparent;
 }
@@ -24,12 +24,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    border-bottom: 1px solid #eee;
 }
 .site-name {
     font-size: 18px;
-    font-weight: 700;
-    color: #1a1a2e;
+    font-weight: 600;
+    color: #1a1a1a;
 }
 .top-actions { display: flex; gap: 16px; }
 .top-actions button {
@@ -44,36 +44,36 @@ body {
     position: sticky;
     top: 52px;
     z-index: 99;
-    background: #f5f6fa;
+    background: #fafafa;
     padding: 10px 16px 8px;
 }
 .search-box {
     width: 100%;
     padding: 12px 16px 12px 40px;
-    border: 2px solid #e8e8e8;
-    border-radius: 10px;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
     font-size: 15px;
     background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='%23999' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27A6.47 6.47 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E") 12px center no-repeat;
     outline: none;
     transition: border-color 0.2s;
 }
-.search-box:focus { border-color: #4a6cf7; }
+.search-box:focus { border-color: #333; }
 .tip-bar {
-    background: #fff8e6;
+    background: #f8f8f8;
     padding: 10px 16px;
     font-size: 13px;
-    color: #8a6d00;
-    border-bottom: 1px solid #f0e4b8;
+    color: #888;
+    border-bottom: 1px solid #f0f0f0;
     display: flex;
     align-items: center;
     gap: 6px;
 }
-.container { max-width: 640px; margin: 0 auto; padding: 0 0 24px; }
-.section { padding: 14px 16px 0; }
+.container { max-width: 640px; margin: 0 auto; padding: 0 0 40px; }
+.section { padding: 20px 16px 0; }
 .section-title {
     font-size: 15px;
-    font-weight: 700;
-    margin-bottom: 8px;
+    font-weight: 600;
+    margin-bottom: 12px;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -82,18 +82,18 @@ body {
 .daily-list::-webkit-scrollbar { display: none; }
 .daily-item {
     background: #fff;
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 8px 12px;
     display: flex;
     align-items: center;
     gap: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid #f0f0f0;
     white-space: nowrap;
     flex-shrink: 0;
     text-decoration: none;
     color: #333;
 }
-.daily-item .date { font-size: 11px; color: #999; }
+.daily-item .date { font-size: 11px; color: #aaa; }
 .daily-item .title {
     font-size: 13px;
     font-weight: 500;
@@ -102,7 +102,7 @@ body {
     text-overflow: ellipsis;
 }
 .badge-new {
-    background: #ff4757;
+    background: #333;
     color: #fff;
     font-size: 9px;
     padding: 1px 4px;
@@ -113,54 +113,54 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 52px;
-    height: 30px;
-    background: #4a6cf7;
+    min-width: 56px;
+    height: 32px;
+    background: #333;
     color: #fff;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 400;
     text-decoration: none;
     flex-shrink: 0;
     margin-left: 10px;
     transition: background 0.2s;
 }
-.btn-get:active { background: #3a5ae0; }
+.btn-get:active { background: #555; }
 .category-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
+    gap: 12px;
 }
 .category-card {
     background: #fff;
-    border-radius: 8px;
-    padding: 10px 4px;
+    border-radius: 12px;
+    padding: 14px 8px;
     text-align: center;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid #f0f0f0;
     cursor: pointer;
     transition: transform 0.15s;
 }
 .category-card:active { transform: scale(0.96); }
 .category-card .icon { font-size: 22px; margin-bottom: 2px; }
 .category-card .name { font-size: 12px; font-weight: 500; color: #333; }
-.category-card .count { font-size: 10px; color: #999; }
-.hot-list { display: flex; flex-direction: column; gap: 8px; }
+.category-card .count { font-size: 10px; color: #aaa; }
+.hot-list { display: flex; flex-direction: column; gap: 10px; }
 .hot-card {
     background: #fff;
-    border-radius: 8px;
-    padding: 10px 12px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    padding: 14px 16px;
+    border: 1px solid #f0f0f0;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .hot-card .title { font-size: 13px; font-weight: 500; flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.resource-list { display: flex; flex-direction: column; gap: 8px; }
+.resource-list { display: flex; flex-direction: column; gap: 10px; }
 .resource-card {
     background: #fff;
-    border-radius: 8px;
-    padding: 10px 12px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    padding: 14px 16px;
+    border: 1px solid #f0f0f0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -180,10 +180,10 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #e74c3c;
+    background: #333;
     color: #fff;
     padding: 16px 32px;
-    border-radius: 12px;
+    border-radius: 20px;
     font-size: 16px;
     font-weight: 500;
     z-index: 9999;
@@ -260,7 +260,7 @@ body {
 .grade-tab {
     flex-shrink: 0;
     padding: 6px 14px;
-    border-radius: 16px;
+    border-radius: 20px;
     font-size: 13px;
     background: #f0f0f0;
     color: #555;
@@ -269,7 +269,7 @@ body {
     transition: all 0.2s;
 }
 .grade-tab.active {
-    background: #4a6cf7;
+    background: #333;
     color: #fff;
     font-weight: 500;
 }
@@ -287,18 +287,18 @@ body {
 <div class="search-wrap">
     <input type="text" class="search-box" placeholder="搜索资料名称..." id="searchInput" autocomplete="off">
 </div>
-<div class="tip-bar" id="tipBar">📢 <span id="tipText"></span></div>
+<div class="tip-bar" id="tipBar"><span id="tipText"></span></div>
 <div class="container">
     <div class="section" id="categorySection">
-        <div class="section-title">📁 资料分类</div>
+        <div class="section-title">资料分类</div>
         <div class="category-grid" id="categoryGrid"></div>
     </div>
     <div class="section" id="dailySection">
-        <div class="section-title" style="font-size:15px;">🔥 每日更新 <a href="#" id="dailyMore" style="font-size:12px;color:#4a6cf7;text-decoration:none;margin-left:auto;">更多 ▸</a></div>
+        <div class="section-title" style="font-size:15px;">每日更新 <a href="#" id="dailyMore" style="font-size:12px;color:#888;text-decoration:none;margin-left:auto;">更多 ▸</a></div>
         <div class="daily-list" id="dailyList"></div>
     </div>
     <div class="section" id="hotSection">
-        <div class="section-title">⭐ 大家都在看</div>
+        <div class="section-title">大家都在看</div>
         <div class="hot-list" id="hotList"></div>
     </div>
     <div class="section" id="listSection" style="display:none;">
@@ -387,7 +387,7 @@ function showCategory(name) {
     document.getElementById('categorySection').style.display = 'none';
     document.getElementById('hotSection').style.display = 'none';
     document.getElementById('listSection').style.display = 'block';
-    document.getElementById('listTitleText').textContent = '📁 ' + name;
+    document.getElementById('listTitleText').textContent = name;
     var cat = categories.filter(function(c){ return c.name === name; })[0];
     var matchList = cat && cat.match ? cat.match : [name];
     var items = resources.filter(function(r){ return matchList.indexOf(r.category) !== -1; });
@@ -504,7 +504,7 @@ function doSearch() {
     document.getElementById('categorySection').style.display = 'none';
     document.getElementById('hotSection').style.display = 'none';
     document.getElementById('listSection').style.display = 'block';
-    document.getElementById('listTitleText').textContent = '🔎 搜索结果';
+    document.getElementById('listTitleText').textContent = '搜索结果';
     var items = resources.filter(function(r) {
         return r.title.toLowerCase().indexOf(kw) !== -1 ||
             r.desc.toLowerCase().indexOf(kw) !== -1 ||
@@ -527,7 +527,7 @@ document.getElementById('dailyMore').addEventListener('click', function(e) {
     document.getElementById('categorySection').style.display = 'none';
     document.getElementById('hotSection').style.display = 'none';
     document.getElementById('listSection').style.display = 'block';
-    document.getElementById('listTitleText').textContent = '🔥 最近更新';
+    document.getElementById('listTitleText').textContent = '最近更新';
     renderResourceList(resources.slice(0, 20));
 });
 
