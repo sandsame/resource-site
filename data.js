@@ -8,6 +8,7 @@ var SITE_DATA = {
     { name: "编程技术", icon: "💻" },
     { name: "设计素材", icon: "🎨" },
     { name: "游戏", icon: "🎮" },
+    { name: "副业赚钱", icon: "💰" },
     { name: "更多资源", icon: "📦" }
   ],
   resources: [
@@ -265,6 +266,15 @@ var SITE_DATA = {
     {"id": 1390, "title": "重修政和经史证类备用本草.卷01至11.总三十卷.宋.唐慎微", "category": "古籍电子书", "tags": ["医书类", "古籍"], "link": "https://pan.quark.cn/s/1b26264e4e46", "desc": "重修政和经史证类备用本草.卷01至11.总三十卷.宋.唐慎微", "date": "2026-05-30"},
     {"id": 1391, "title": "祝由科·秘诀奇书", "category": "古籍电子书", "tags": ["祝由全套类", "古籍"], "link": "https://pan.quark.cn/s/8d996a2d1320", "desc": "祝由科.秘诀奇书.乾元亨利贞版", "date": "2026-05-30"},
     {"id": 1392, "title": "祝由十三科", "category": "古籍电子书", "tags": ["祝由全套类", "古籍"], "link": "https://pan.quark.cn/s/055e7696a19f", "desc": "祝由十三科", "date": "2026-05-30"},
+    {"id": 1393, "title": "450个搞钱野路子项目解析", "category": "副业赚钱", "tags": ["副业","赚钱"], "link": "https://pan.quark.cn/s/84296dc64eb2", "desc": "450个搞钱野路子项目解析", "date": "2026-05-30"},
+    {"id": 1394, "title": "从0开始拼多多日销千单训练营", "category": "副业赚钱", "tags": ["副业","赚钱"], "link": "https://pan.quark.cn/s/9122423a1485", "desc": "从0开始拼多多日销千单训练营", "date": "2026-05-30"},
+    {"id": 1395, "title": "跨境电商亚马逊培训+FB营销推广", "category": "副业赚钱", "tags": ["副业","赚钱"], "link": "https://pan.quark.cn/s/5b7d96b53373", "desc": "跨境电商亚马逊培训+FB营销推广", "date": "2026-05-30"},
+    {"id": 1396, "title": "淘宝虚拟类目蓝海赛道教程", "category": "副业赚钱", "tags": ["副业","赚钱"], "link": "https://pan.quark.cn/s/fef2f1c1eb72", "desc": "淘宝虚拟类目蓝海赛道教程", "date": "2026-05-30"},
+    {"id": 1397, "title": "淘宝开店0基础全套视频", "category": "副业赚钱", "tags": ["副业","赚钱"], "link": "https://pan.quark.cn/s/c4a33afc42f7", "desc": "淘宝开店0基础全套视频", "date": "2026-05-30"},
+    {"id": 1398, "title": "闲鱼买卖折扣卡项目秘籍", "category": "副业赚钱", "tags": ["副业","赚钱"], "link": "https://pan.quark.cn/s/5a5f7a52fab7", "desc": "闲鱼买卖折扣卡项目秘籍", "date": "2026-05-30"},
+    {"id": 1399, "title": "自媒体资料合集", "category": "副业赚钱", "tags": ["副业","赚钱"], "link": "https://pan.quark.cn/s/e73facab162f", "desc": "自媒体资料合集", "date": "2026-05-30"},
+    {"id": 1400, "title": "下班后100个赚钱小生意", "category": "副业赚钱", "tags": ["副业","赚钱"], "link": "https://pan.quark.cn/s/ed2729a965a7", "desc": "下班后100个赚钱小生意", "date": "2026-05-30"},
+    {"id": 1401, "title": "58种摆摊小吃配料+制作流程", "category": "副业赚钱", "tags": ["副业","赚钱"], "link": "https://pan.quark.cn/s/c12f803147b3", "desc": "58种摆摊小吃配料+制作流程", "date": "2026-05-30"},
     {"id": 1124, "title": "传习录", "category": "古籍电子书", "tags": ["道教类", "古籍"], "link": "https://pan.quark.cn/s/eca4d9fdd089", "desc": "传习录", "date": "2026-05-30"},
     {"id": 1125, "title": "老子授经图卷", "category": "古籍电子书", "tags": ["道教类", "古籍"], "link": "https://pan.quark.cn/s/bad3081018e6", "desc": "老子授经图卷.传元代.盛懋作", "date": "2026-05-30"},
     {"id": 1126, "title": "穆天子传（六卷）", "category": "古籍电子书", "tags": ["道教类", "古籍"], "link": "https://pan.quark.cn/s/da0c1684d157", "desc": "穆天子传.六卷.明嘉靖杨毅手抄本", "date": "2026-05-30"},
