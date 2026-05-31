@@ -273,8 +273,6 @@ body {
 }
 .grade-tab:active { opacity: 0.8; }
 </style>
-<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-<script>LA.init({id:"emhi8s6k",ck:"emhi8s6k"})</script>
 </head>
 <body>
 <div class="top-bar">
@@ -557,7 +555,6 @@ document.querySelector('.site-name').style.cursor = 'pointer';
 
 function copyLink(link, e) {
     if (e) e.preventDefault();
-    try { LA.track('claim_click', {link: link}); } catch(ex) {}
     navigator.clipboard.writeText(link).catch(function(){
         var t = document.createElement('textarea');
         t.value = link;
