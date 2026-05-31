@@ -252,15 +252,11 @@ body {
 .back-btn:active { background: #e0e0e0; }
 .grade-tabs {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
-    overflow-x: auto;
     padding: 10px 0;
-    -webkit-overflow-scrolling: touch;
 }
-.grade-tabs::-webkit-scrollbar { display: none; }
-.grade-tabs { scrollbar-width: none; }
 .grade-tab {
-    flex-shrink: 0;
     padding: 6px 14px;
     border-radius: 20px;
     font-size: 13px;
@@ -584,7 +580,7 @@ renderDaily();
 renderCategories();
 renderHot();
 
-document.querySelectorAll('.grade-tabs, .daily-list').forEach(function(el) {
+document.querySelectorAll('.daily-list').forEach(function(el) {
     el.addEventListener('wheel', function(e) {
         if (Math.abs(e.deltaY) > 0) {
             e.preventDefault();
