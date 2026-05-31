@@ -392,9 +392,9 @@ function showCategory(name) {
     var matchList = cat && cat.match ? cat.match : [name];
     var items = resources.filter(function(r){ return matchList.indexOf(r.category) !== -1; });
     var tabsEl = document.getElementById('gradeTabs');
-    if (name === '小学资料') {
-        var grades = ['全部','一年级','二年级','三年级','四年级','五年级','六年级','其他'];
-        var allGradeKeys = ['一年级','二年级','三年级','四年级','五年级','六年级'];
+    if (name === '小学初高中') {
+        var grades = ['全部','一年级','二年级','三年级','四年级','五年级','六年级','初中','高中','其他'];
+        var allGradeKeys = ['一年级','二年级','三年级','四年级','五年级','六年级','初中','高中'];
         var html = '';
         grades.forEach(function(g, i) {
             html += '<button class="grade-tab' + (i === 0 ? ' active' : '') + '" data-grade="' + g + '">' + g + '</button>';
