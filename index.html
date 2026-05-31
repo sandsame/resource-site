@@ -78,10 +78,9 @@ body {
     align-items: center;
     gap: 6px;
 }
-.daily-list { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 4px; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: #ddd transparent; }
-.daily-list::-webkit-scrollbar { height: 4px; }
-.daily-list::-webkit-scrollbar-track { background: transparent; }
-.daily-list::-webkit-scrollbar-thumb { background: #ddd; border-radius: 2px; }
+.daily-list { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 4px; -webkit-overflow-scrolling: touch; }
+.daily-list::-webkit-scrollbar { display: none; }
+.daily-list { scrollbar-width: none; }
 .daily-item {
     background: #fff;
     border-radius: 12px;
@@ -257,12 +256,9 @@ body {
     overflow-x: auto;
     padding: 10px 0;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
-    scrollbar-color: #ddd transparent;
 }
-.grade-tabs::-webkit-scrollbar { height: 4px; }
-.grade-tabs::-webkit-scrollbar-track { background: transparent; }
-.grade-tabs::-webkit-scrollbar-thumb { background: #ddd; border-radius: 2px; }
+.grade-tabs::-webkit-scrollbar { display: none; }
+.grade-tabs { scrollbar-width: none; }
 .grade-tab {
     flex-shrink: 0;
     padding: 6px 14px;
@@ -587,6 +583,15 @@ function showToast(msg) {
 renderDaily();
 renderCategories();
 renderHot();
+
+document.querySelectorAll('.grade-tabs, .daily-list').forEach(function(el) {
+    el.addEventListener('wheel', function(e) {
+        if (Math.abs(e.deltaY) > 0) {
+            e.preventDefault();
+            el.scrollLeft += e.deltaY;
+        }
+    }, { passive: false });
+});
 </script>
 </body>
 </html>
