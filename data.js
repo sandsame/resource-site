@@ -6,12 +6,13 @@ var SITE_DATA = {
     { name: "古籍电子书", icon: "📜" },
     { name: "考研考公四六级", icon: "🎓" },
     { name: "编程技术", icon: "💻" },
-    { name: "设计素材", icon: "🎨" },
+    { name: "影视剧", icon: "🎬" },
     { name: "游戏", icon: "🎮" },
     { name: "副业赚钱", icon: "💰" },
     { name: "更多资源", icon: "📦" }
   ],
   resources: [
+    {"id": 1601, "title": "【豆瓣Top250】蓝光超清(2026.05.31整理收集和排名)", "category": "影视剧", "tags": ["影视剧"], "link": "https://pan.xunlei.com/s/VOtxvDe6UH9SpDqb9vC3N2NVA1?pwd=5dfh#", "desc": "豆瓣Top250蓝光超清", "date": "2026-05-31"},
     {"id": 1562, "title": "2026年时间轴月计划表", "category": "更多资源", "tags": ["更多资源"], "link": "https://pan.quark.cn/s/f2929b3577c1", "desc": "2026年时间轴月计划表", "date": "2026-05-30"},
     {"id": 1563, "title": "老照片", "category": "更多资源", "tags": ["更多资源"], "link": "https://pan.quark.cn/s/e3d333634726", "desc": "老照片", "date": "2026-05-30"},
     {"id": 1564, "title": "美国UFO解密", "category": "更多资源", "tags": ["更多资源"], "link": "https://pan.quark.cn/s/a9cfc2745967", "desc": "美国UFO解密", "date": "2026-05-30"},
