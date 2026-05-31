@@ -564,7 +564,7 @@ function copyLink(link, e) {
         document.execCommand('copy');
         document.body.removeChild(t);
     });
-    var name = link.indexOf('quark') !== -1 ? '夸克网盘' : '网盘';
+    var name = link.indexOf('quark') !== -1 ? '夸克网盘' : link.indexOf('xunlei') !== -1 ? '手机迅雷App' : '网盘';
     showToast('已复制链接，打开' + name + '即可保存下载');
     setTimeout(function(){ window.location.href = link; }, 2500);
 }
