@@ -68,6 +68,7 @@ body {
     align-items: center;
     gap: 6px;
 }
+.tip-highlight { color: #e74c3c; font-size: 15px; font-weight: 600; }
 .container { max-width: 640px; margin: 0 auto; padding: 0 0 40px; }
 .section { padding: 20px 16px 0; }
 .section-title {
@@ -324,7 +325,7 @@ var data = SITE_DATA;
 var resources = data.resources;
 var categories = data.categories;
 
-document.getElementById('tipText').textContent = data.tip;
+document.getElementById('tipText').innerHTML = data.tip.replace(/迅雷/g, '<span class="tip-highlight">迅雷</span>').replace(/请看好剧/g, '<span class="tip-highlight">请看好剧</span>');
 
 function formatDate(d) {
     var parts = d.split('-');
