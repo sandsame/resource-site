@@ -62,13 +62,14 @@ body {
     background: #f8f8f8;
     padding: 10px 16px;
     font-size: 13px;
-    color: #888;
+    color: #333;
     border-bottom: 1px solid #f0f0f0;
     display: flex;
     align-items: center;
     gap: 6px;
 }
 .tip-highlight { color: #e74c3c; font-size: 15px; font-weight: 600; }
+.tip-bold { font-weight: 600; }
 .container { max-width: 640px; margin: 0 auto; padding: 0 0 40px; }
 .section { padding: 20px 16px 0; }
 .section-title {
@@ -325,7 +326,7 @@ var data = SITE_DATA;
 var resources = data.resources;
 var categories = data.categories;
 
-document.getElementById('tipText').innerHTML = data.tip.replace(/迅雷/g, '<span class="tip-highlight">迅雷</span>').replace(/请看好剧/g, '<span class="tip-highlight">请看好剧</span>');
+document.getElementById('tipText').innerHTML = data.tip.replace(/迅雷/g, '<span class="tip-highlight">迅雷</span>').replace(/请看好剧/g, '<span class="tip-highlight">请看好剧</span>').replace(/(动漫|国产剧|综艺|美剧|韩剧|在线免费超清观看可投屏)/g, '<span class="tip-bold">$1</span>');
 
 function formatDate(d) {
     var parts = d.split('-');
