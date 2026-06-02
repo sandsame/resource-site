@@ -170,6 +170,42 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.more-tip {
+    background: #fff3e0;
+    padding: 12px 14px;
+    font-size: 13px;
+    color: #333;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+.more-tip b { color: #ff6b35; }
+.primary-tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 8px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #f0f0f0;
+}
+.primary-tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    min-height: 44px;
+}
+.primary-tab.active {
+    background: #ff6b35;
+    color: #fff;
+    font-weight: 700;
+}
 .grade-tabs {
     display: flex;
     flex-wrap: wrap;
@@ -286,6 +322,8 @@ body {
             <a href="#" class="back-btn" onclick="showHome();return false;">←</a>
             <span id="listTitleText">搜索结果</span>
         </div>
+        <div id="moreTip" class="more-tip" style="display:none;">动漫、国产剧、综艺、美剧、韩剧等，下载<b>【迅雷】</b>app搜<b>【请看好剧】</b>即可在线免费超清观看可投屏</div>
+        <div id="primaryTabs" class="primary-tabs" style="display:none;"></div>
         <div id="gradeTabs" class="grade-tabs" style="display:none;"></div>
         <div class="resource-list" id="resourceList"></div>
         <div id="emptyState" style="display:none;text-align:center;padding:40px 0;color:#999;">没有找到相关资料</div>
@@ -381,10 +419,67 @@ function showCategory(name) {
     document.getElementById('categorySection').style.display = 'none';
     document.getElementById('listSection').style.display = 'block';
     document.getElementById('listTitleText').textContent = name;
+    var moreTip = document.getElementById('moreTip');
+    var primaryTabs = document.getElementById('primaryTabs');
     var cat = categories.filter(function(c){ return c.name === name; })[0];
     var matchList = cat && cat.match ? cat.match : [name];
     var items = resources.filter(function(r){ return matchList.indexOf(r.category) !== -1; });
     var tabsEl = document.getElementById('gradeTabs');
+
+    if (name === '更多资源') {
+        moreTip.style.display = 'block';
+        primaryTabs.style.display = 'flex';
+        primaryTabs.innerHTML = ['影视剧','游戏','其他'].map(function(t,i){ return '<button class="primary-tab'+(i===0?' active':'')+'" data-cat="'+t+'">'+t+'</button>'; }).join('');
+        function showMoreSub(subName) {
+            var subItems;
+            if (subName === '影视剧') subItems = resources.filter(function(r){ return r.category==='影视剧'; });
+            else if (subName === '游戏') subItems = resources.filter(function(r){ return r.category==='游戏'; });
+            else subItems = resources.filter(function(r){ return r.category==='更多资源'; });
+
+            if (subName === '影视剧') {
+                var movieTags = ['全部','豆瓣Top250','恐怖片Top100','人人影视600部'];
+                tabsEl.innerHTML = movieTags.map(function(g,i){ return '<button class="grade-tab'+(i===0?' active':'')+'" data-grade="'+g+'">'+g+'</button>'; }).join('');
+                tabsEl.style.display = 'flex';
+                tabsEl.onclick = function(e) {
+                    var btn = e.target.closest('.grade-tab'); if (!btn) return;
+                    tabsEl.querySelectorAll('.grade-tab').forEach(function(b){ b.classList.remove('active'); });
+                    btn.classList.add('active');
+                    var tag = btn.getAttribute('data-grade');
+                    if (tag === '全部') renderResourceList(subItems);
+                    else renderResourceList(subItems.filter(function(r){ return r.tags.indexOf(tag)!==-1; }));
+                };
+            } else if (subName === '游戏') {
+                var letters = ['全部'].concat('ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')).concat(['其他']);
+                var allLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+                tabsEl.innerHTML = letters.map(function(g,i){ return '<button class="grade-tab'+(i===0?' active':'')+'" data-grade="'+g+'">'+g+'</button>'; }).join('');
+                tabsEl.style.display = 'flex';
+                tabsEl.onclick = function(e) {
+                    var btn = e.target.closest('.grade-tab'); if (!btn) return;
+                    tabsEl.querySelectorAll('.grade-tab').forEach(function(b){ b.classList.remove('active'); });
+                    btn.classList.add('active');
+                    var letter = btn.getAttribute('data-grade');
+                    if (letter === '全部') renderResourceList(subItems);
+                    else if (letter === '其他') renderResourceList(subItems.filter(function(r){ return !allLetters.some(function(l){ return r.tags.indexOf(l)!==-1; }); }));
+                    else renderResourceList(subItems.filter(function(r){ return r.tags.indexOf(letter)!==-1; }));
+                };
+            } else {
+                tabsEl.style.display = 'none';
+            }
+            renderResourceList(subItems);
+        }
+        primaryTabs.onclick = function(e) {
+            var btn = e.target.closest('.primary-tab'); if (!btn) return;
+            primaryTabs.querySelectorAll('.primary-tab').forEach(function(b){ b.classList.remove('active'); });
+            btn.classList.add('active');
+            showMoreSub(btn.getAttribute('data-cat'));
+        };
+        showMoreSub('影视剧');
+        return;
+    }
+
+    moreTip.style.display = 'none';
+    primaryTabs.style.display = 'none';
+
     if (name === '小学初高中') {
         var grades = ['全部','一年级','二年级','三年级','四年级','五年级','六年级','初中','高中','其他'];
         var allGradeKeys = ['一年级','二年级','三年级','四年级','五年级','六年级','初中','高中'];
@@ -460,6 +555,8 @@ function showHome() {
     document.getElementById('todaySection').style.display = '';
     document.getElementById('categorySection').style.display = '';
     document.getElementById('listSection').style.display = 'none';
+    document.getElementById('moreTip').style.display = 'none';
+    document.getElementById('primaryTabs').style.display = 'none';
     document.getElementById('searchInput').value = '';
 }
 

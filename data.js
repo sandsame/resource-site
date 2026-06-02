@@ -7,9 +7,7 @@ var SITE_DATA = {
     { name: "古籍电子书", icon: "📜" },
     { name: "副业赚钱", icon: "💰" },
     { name: "编程技术", icon: "💻" },
-    { name: "影视剧", icon: "🎬" },
-    { name: "游戏", icon: "🎮" },
-    { name: "更多资源", icon: "📦" }
+    { name: "更多资源", icon: "📦", match: ["影视剧","游戏","更多资源"] }
   ],
   resources: [
     {"id": 2119, "title": "龙虎少年队", "category": "影视剧", "tags": ["人人影视600部"], "link": "https://pan.xunlei.com/s/VOty3tz-uNq18YG8c6fAC0t_A1?pwd=yw2n#", "desc": "龙虎少年队", "date": "2026-05-31"},
