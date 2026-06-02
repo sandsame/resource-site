@@ -3,12 +3,12 @@ var SITE_DATA = {
   tip: "动漫、国产剧、综艺、美剧、韩剧等，下载【迅雷】app搜 【请看好剧】 即可在线免费超清观看可投屏",
   categories: [
     { name: "小学初高中", icon: "📖", match: ["小学语文","小学数学","小学英语","小学综合","初中","高中"] },
-    { name: "古籍电子书", icon: "📜" },
     { name: "考研考公四六级", icon: "🎓" },
+    { name: "古籍电子书", icon: "📜" },
+    { name: "副业赚钱", icon: "💰" },
     { name: "编程技术", icon: "💻" },
     { name: "影视剧", icon: "🎬" },
     { name: "游戏", icon: "🎮" },
-    { name: "副业赚钱", icon: "💰" },
     { name: "更多资源", icon: "📦" }
   ],
   resources: [
