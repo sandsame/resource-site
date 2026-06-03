@@ -183,11 +183,14 @@ body {
 .primary-tabs {
     display: flex;
     gap: 0;
-    margin-bottom: 8px;
+    margin-bottom: 0;
     background: #fff;
     border-radius: 8px;
     overflow: hidden;
     border: 1px solid #f0f0f0;
+    position: sticky;
+    top: 44px;
+    z-index: 9;
 }
 .primary-tab {
     flex: 1;
@@ -210,9 +213,12 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    padding: 12px;
+    padding: 10px 12px;
     background: #fff;
     border-bottom: 1px solid #f0f0f0;
+    position: sticky;
+    top: 44px;
+    z-index: 8;
 }
 .grade-tab {
     padding: 6px 14px;
@@ -415,6 +421,7 @@ function renderCategories() {
 }
 
 function showCategory(name) {
+    window.scrollTo(0, 0);
     document.getElementById('todaySection').style.display = 'none';
     document.getElementById('categorySection').style.display = 'none';
     document.getElementById('listSection').style.display = 'block';
@@ -431,6 +438,7 @@ function showCategory(name) {
         primaryTabs.style.display = 'flex';
         primaryTabs.innerHTML = ['影视剧','游戏','其他'].map(function(t,i){ return '<button class="primary-tab'+(i===0?' active':'')+'" data-cat="'+t+'">'+t+'</button>'; }).join('');
         function showMoreSub(subName) {
+            tabsEl.style.top = '88px';
             var subItems;
             if (subName === '影视剧') subItems = resources.filter(function(r){ return r.category==='影视剧'; });
             else if (subName === '游戏') subItems = resources.filter(function(r){ return r.category==='游戏'; });
@@ -479,6 +487,7 @@ function showCategory(name) {
 
     moreTip.style.display = 'none';
     primaryTabs.style.display = 'none';
+    tabsEl.style.top = '44px';
 
     if (name === '小学初高中') {
         var grades = ['全部','一年级','二年级','三年级','四年级','五年级','六年级','初中','高中','其他'];
