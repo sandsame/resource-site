@@ -10,6 +10,10 @@ var SITE_DATA = {
     { name: "更多资源", icon: "📦", match: ["影视剧","游戏","更多资源"] }
   ],
   resources: [
+    {"id": 2504, "title": "期末复习", "category": "小学综合", "tags": ["期末","复习","1-6年级"], "link": "https://pan.quark.cn/s/d07e1a1f6c17", "desc": "期末复习资料", "date": "2026-06-03"},
+    {"id": 2505, "title": "小学数学期末试卷1-6下册（苏教版）", "category": "小学数学", "tags": ["数学","期末","苏教版","1-6年级"], "link": "https://pan.quark.cn/s/537d38c49820", "desc": "苏教版数学期末试卷", "date": "2026-06-03"},
+    {"id": 2506, "title": "小学数学期末试卷1-6下册（北师版）", "category": "小学数学", "tags": ["数学","期末","北师版","1-6年级"], "link": "https://pan.quark.cn/s/f5e4cdd00292", "desc": "北师版数学期末试卷", "date": "2026-06-03"},
+    {"id": 2507, "title": "小学数学期末试卷1-6下册（人教版）", "category": "小学数学", "tags": ["数学","期末","人教版","1-6年级"], "link": "https://pan.quark.cn/s/af7a866480cd", "desc": "人教版数学期末试卷", "date": "2026-06-03"},
     {"id": 2119, "title": "龙虎少年队", "category": "影视剧", "tags": ["人人影视600部"], "link": "https://pan.xunlei.com/s/VOty3tz-uNq18YG8c6fAC0t_A1?pwd=yw2n#", "desc": "龙虎少年队", "date": "2026-05-31"},
     {"id": 2120, "title": "惊变28周", "category": "影视剧", "tags": ["人人影视600部"], "link": "https://pan.xunlei.com/s/VOty3tz-uNq18YG8c6fAC0t_A1?pwd=yw2n#", "desc": "惊变28周", "date": "2026-05-31"},
     {"id": 2121, "title": "三十极夜", "category": "影视剧", "tags": ["人人影视600部"], "link": "https://pan.xunlei.com/s/VOty3tz-uNq18YG8c6fAC0t_A1?pwd=yw2n#", "desc": "三十极夜", "date": "2026-05-31"},
