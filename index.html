@@ -8,10 +8,10 @@
     <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-    background: #f5f5f7;
-    color: #1a1a1a;
-    line-height: 1.5;
+    font-family: "Microsoft YaHei", "微软雅黑", -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #fafafa;
+    color: #333;
+    line-height: 1.6;
     font-size: 15px;
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: transparent;
@@ -22,30 +22,31 @@ body {
 }
 .banner {
     height: 48px;
-    background: linear-gradient(135deg, #ff6b35, #ff8e53);
+    background: #fff;
+    border-bottom: 1px solid #eee;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: #1a1a1a;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
 }
 .search-wrap {
     padding: 10px 16px 8px;
-    background: #f5f5f7;
+    background: #fafafa;
 }
 .search-box {
     width: 100%;
     padding: 10px 14px 10px 38px;
     border: 1px solid #e8e8e8;
-    border-radius: 10px;
+    border-radius: 12px;
     font-size: 14px;
     background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23999' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27A6.47 6.47 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E") 12px center no-repeat;
     outline: none;
     transition: border-color 0.2s;
 }
-.search-box:focus { border-color: #ff6b35; }
-.section { padding: 16px 16px 0; }
+.search-box:focus { border-color: #333; }
+.section { padding: 20px 16px 0; }
 .section-title {
     font-size: 18px;
     font-weight: 700;
@@ -53,19 +54,20 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
+    color: #1a1a1a;
 }
 .section-title::before {
     content: '';
     width: 4px;
     height: 18px;
-    background: #ff6b35;
+    background: #333;
     border-radius: 2px;
 }
 .today-list { display: flex; flex-direction: column; gap: 0; }
 .today-item {
     display: flex;
     align-items: center;
-    padding: 8px 0;
+    padding: 10px 0;
     border-bottom: 1px solid #f0f0f0;
     gap: 8px;
 }
@@ -87,26 +89,26 @@ body {
     font-weight: 500;
     flex-shrink: 0;
 }
-.pan-tag-quark { background: #e6f7ff; color: #00b4ff; }
-.pan-tag-baidu { background: #ffebee; color: #e53935; }
-.pan-tag-xunlei { background: #fff3e0; color: #ff6b35; }
+.pan-tag-quark { background: #f5f5f5; color: #666; }
+.pan-tag-baidu { background: #f5f5f5; color: #666; }
+.pan-tag-xunlei { background: #f5f5f5; color: #666; }
 .btn-save {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 64px;
-    height: 34px;
+    height: 32px;
     border-radius: 8px;
     color: #fff;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 400;
     text-decoration: none;
     flex-shrink: 0;
 }
-.btn-save-quark { background: #00b4ff; }
-.btn-save-baidu { background: #e53935; }
-.btn-save-xunlei { background: #ff6b35; }
-.btn-save:active { opacity: 0.85; }
+.btn-save-quark { background: #333; }
+.btn-save-baidu { background: #333; }
+.btn-save-xunlei { background: #333; }
+.btn-save:active { opacity: 0.7; }
 .category-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -120,14 +122,14 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border: 1px solid #f0f0f0;
     cursor: pointer;
     transition: transform 0.15s;
 }
 .category-card:active { transform: scale(0.96); }
 .category-card .icon { font-size: 28px; margin-bottom: 4px; }
-.category-card .name { font-size: 14px; font-weight: 700; color: #1a1a1a; }
-.category-card .count { font-size: 12px; color: #999; }
+.category-card .name { font-size: 14px; font-weight: 600; color: #1a1a1a; }
+.category-card .count { font-size: 12px; color: #aaa; }
 .list-header {
     display: flex;
     align-items: center;
@@ -141,7 +143,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 10;
-    background: #f5f5f7;
+    background: #fafafa;
 }
 .back-btn {
     display: inline-flex;
@@ -158,8 +160,8 @@ body {
 .resource-item {
     display: flex;
     align-items: center;
-    height: 46px;
-    padding: 0 12px;
+    height: 48px;
+    padding: 0 16px;
     background: #fff;
     border-bottom: 1px solid #f0f0f0;
     gap: 8px;
@@ -173,19 +175,19 @@ body {
     text-overflow: ellipsis;
 }
 .more-tip {
-    background: #fff3e0;
+    background: #f8f8f8;
     padding: 12px 14px;
     font-size: 13px;
-    color: #333;
-    border-radius: 8px;
+    color: #888;
+    border-radius: 12px;
     line-height: 1.6;
 }
-.more-tip b { color: #ff6b35; font-size: 22px; }
+.more-tip b { color: #333; font-size: 14px; }
 .primary-tabs {
     display: flex;
     gap: 0;
     background: #fff;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
     border: 1px solid #f0f0f0;
 }
@@ -202,9 +204,9 @@ body {
     min-height: 44px;
 }
 .primary-tab.active {
-    background: #ff6b35;
+    background: #333;
     color: #fff;
-    font-weight: 700;
+    font-weight: 600;
 }
 .grade-tabs {
     display: flex;
@@ -226,29 +228,29 @@ body {
     display: inline-flex;
     align-items: center;
 }
-.grade-tab.active { background: #ff6b35; color: #fff; font-weight: 600; }
+.grade-tab.active { background: #333; color: #fff; font-weight: 600; }
 .footer-guide {
-    background: #f0f0f0;
+    background: #f5f5f5;
     height: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 24px;
+    margin-top: 40px;
     gap: 6px;
 }
-.footer-title { font-size: 16px; font-weight: 600; color: #1a1a1a; }
-.footer-sub { font-size: 13px; color: #666; }
+.footer-title { font-size: 15px; font-weight: 600; color: #1a1a1a; }
+.footer-sub { font-size: 13px; color: #aaa; }
 .toast {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #e74c3c;
+    background: #333;
     color: #fff;
     padding: 16px 32px;
-    border-radius: 12px;
-    font-size: 16px;
+    border-radius: 20px;
+    font-size: 15px;
     font-weight: 500;
     z-index: 9999;
     opacity: 0;
@@ -305,16 +307,16 @@ body {
 </head>
 <body>
 <div class="app-wrap">
-    <div class="banner">📢 迅雷搜索「南枝资源库」每日更新</div>
+    <div class="banner">迅雷搜索「南枝资源库」每日更新</div>
     <div class="search-wrap">
         <input type="text" class="search-box" placeholder="搜索资料名称..." id="searchInput" autocomplete="off">
     </div>
     <div id="todaySection" class="section">
-        <div class="section-title">🔥 今日更新</div>
+        <div class="section-title">今日更新</div>
         <div class="today-list" id="todayList"></div>
     </div>
     <div id="categorySection" class="section">
-        <div class="section-title">📁 资料分类</div>
+        <div class="section-title">资料分类</div>
         <div class="category-grid" id="categoryGrid"></div>
     </div>
     <div id="listSection" class="section" style="display:none;">
@@ -331,7 +333,7 @@ body {
         <div id="emptyState" style="display:none;text-align:center;padding:40px 0;color:#999;">没有找到相关资料</div>
     </div>
     <div class="footer-guide">
-        <div class="footer-title">📌 收藏本站，下次打开迅雷搜索「南枝资源库」直达</div>
+        <div class="footer-title">收藏本站，下次打开迅雷搜索「南枝资源库」直达</div>
         <div class="footer-sub">仅供学习交流使用</div>
     </div>
 </div>
@@ -371,14 +373,15 @@ function isRecent(d) {
 }
 
 function renderToday() {
-    var today = resources.filter(function(r){ return isToday(r.date); });
-    if (today.length === 0) today = resources.filter(function(r){ return isRecent(r.date); });
-    if (today.length === 0) today = resources.slice(0, 6);
+    var pinned = resources.filter(function(r){ return r.pinTop; });
+    var today = resources.filter(function(r){ return !r.pinTop && isToday(r.date); });
+    if (today.length === 0) today = resources.filter(function(r){ return !r.pinTop && isRecent(r.date); });
+    if (today.length === 0) today = resources.filter(function(r){ return !r.pinTop; }).slice(0, 6);
     today.sort(function(a, b) {
         var order = {quark: 0, baidu: 1, xunlei: 2};
         return order[getPanType(a.link)] - order[getPanType(b.link)];
     });
-    today = today.slice(0, 6);
+    today = pinned.concat(today).slice(0, 8);
     var html = '';
     today.forEach(function(r) {
         var type = getPanType(r.link);
