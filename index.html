@@ -136,10 +136,12 @@ body {
     border-bottom: 1px solid #f0f0f0;
     border-radius: 8px 8px 0 0;
     padding: 0 12px;
-    margin-bottom: 0;
+}
+.list-sticky-top {
     position: sticky;
     top: 0;
     z-index: 10;
+    background: #f5f5f7;
 }
 .back-btn {
     display: inline-flex;
@@ -177,22 +179,15 @@ body {
     color: #333;
     border-radius: 8px;
     line-height: 1.6;
-    position: sticky;
-    top: 44px;
-    z-index: 9;
 }
-.more-tip b { color: #ff6b35; font-size: 2em; }
+.more-tip b { color: #ff6b35; font-size: 22px; }
 .primary-tabs {
     display: flex;
     gap: 0;
-    margin-bottom: 0;
     background: #fff;
     border-radius: 8px;
     overflow: hidden;
     border: 1px solid #f0f0f0;
-    position: sticky;
-    top: 110px;
-    z-index: 8;
 }
 .primary-tab {
     flex: 1;
@@ -218,9 +213,6 @@ body {
     padding: 10px 12px;
     background: #fff;
     border-bottom: 1px solid #f0f0f0;
-    position: sticky;
-    top: 44px;
-    z-index: 8;
 }
 .grade-tab {
     padding: 6px 14px;
@@ -326,13 +318,15 @@ body {
         <div class="category-grid" id="categoryGrid"></div>
     </div>
     <div id="listSection" class="section" style="display:none;">
-        <div class="list-header" id="listHeader">
-            <a href="#" class="back-btn" onclick="showHome();return false;">←</a>
-            <span id="listTitleText">搜索结果</span>
+        <div class="list-sticky-top">
+            <div class="list-header" id="listHeader">
+                <a href="#" class="back-btn" onclick="showHome();return false;">←</a>
+                <span id="listTitleText">搜索结果</span>
+            </div>
+            <div id="moreTip" class="more-tip" style="display:none;">动漫、国产剧、综艺、美剧、韩剧等，下载<b>【迅雷】</b>app搜<b>【请看好剧】</b>即可在线免费超清观看可投屏</div>
+            <div id="primaryTabs" class="primary-tabs" style="display:none;"></div>
+            <div id="gradeTabs" class="grade-tabs" style="display:none;"></div>
         </div>
-        <div id="moreTip" class="more-tip" style="display:none;">动漫、国产剧、综艺、美剧、韩剧等，下载<b>【迅雷】</b>app搜<b>【请看好剧】</b>即可在线免费超清观看可投屏</div>
-        <div id="primaryTabs" class="primary-tabs" style="display:none;"></div>
-        <div id="gradeTabs" class="grade-tabs" style="display:none;"></div>
         <div class="resource-list" id="resourceList"></div>
         <div id="emptyState" style="display:none;text-align:center;padding:40px 0;color:#999;">没有找到相关资料</div>
     </div>
@@ -440,7 +434,6 @@ function showCategory(name) {
         primaryTabs.style.display = 'flex';
         primaryTabs.innerHTML = ['影视剧','游戏','其他'].map(function(t,i){ return '<button class="primary-tab'+(i===0?' active':'')+'" data-cat="'+t+'">'+t+'</button>'; }).join('');
         function showMoreSub(subName) {
-            tabsEl.style.top = '154px';
             var subItems;
             if (subName === '影视剧') subItems = resources.filter(function(r){ return r.category==='影视剧'; });
             else if (subName === '游戏') subItems = resources.filter(function(r){ return r.category==='游戏'; });
@@ -489,7 +482,6 @@ function showCategory(name) {
 
     moreTip.style.display = 'none';
     primaryTabs.style.display = 'none';
-    tabsEl.style.top = '44px';
 
     if (name === '小学初高中') {
         var grades = ['全部','一年级','二年级','三年级','四年级','五年级','六年级','初中','高中','其他'];
