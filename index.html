@@ -176,10 +176,12 @@ body {
     font-size: 13px;
     color: #333;
     border-radius: 8px;
-    margin-bottom: 12px;
     line-height: 1.6;
+    position: sticky;
+    top: 44px;
+    z-index: 9;
 }
-.more-tip b { color: #ff6b35; }
+.more-tip b { color: #ff6b35; font-size: 26px; }
 .primary-tabs {
     display: flex;
     gap: 0;
@@ -189,8 +191,8 @@ body {
     overflow: hidden;
     border: 1px solid #f0f0f0;
     position: sticky;
-    top: 44px;
-    z-index: 9;
+    top: 110px;
+    z-index: 8;
 }
 .primary-tab {
     flex: 1;
@@ -438,7 +440,7 @@ function showCategory(name) {
         primaryTabs.style.display = 'flex';
         primaryTabs.innerHTML = ['影视剧','游戏','其他'].map(function(t,i){ return '<button class="primary-tab'+(i===0?' active':'')+'" data-cat="'+t+'">'+t+'</button>'; }).join('');
         function showMoreSub(subName) {
-            tabsEl.style.top = '88px';
+            tabsEl.style.top = '154px';
             var subItems;
             if (subName === '影视剧') subItems = resources.filter(function(r){ return r.category==='影视剧'; });
             else if (subName === '游戏') subItems = resources.filter(function(r){ return r.category==='游戏'; });
