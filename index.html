@@ -54,6 +54,44 @@ body {
     font-size: 14px;
     font-weight: 800;
 }
+.tag-marquee {
+    margin: 14px 12px 0;
+    padding: 10px 0 12px;
+    overflow: hidden;
+    border: var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    background: #fff;
+}
+.tag-marquee-track {
+    display: flex;
+    width: max-content;
+    gap: 10px;
+    animation: marqueeTags 26s linear infinite;
+}
+.tag-marquee:hover .tag-marquee-track { animation-play-state: paused; }
+.hot-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+    padding: 0 14px;
+    border: 2px solid var(--c-ink);
+    border-radius: 999px;
+    box-shadow: var(--shadow-sm);
+    color: var(--c-ink);
+    font-size: 13px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+.hot-tag:nth-child(4n+1) { background: var(--c-yellow); }
+.hot-tag:nth-child(4n+2) { background: #d8ecff; }
+.hot-tag:nth-child(4n+3) { background: #dff8ea; }
+.hot-tag:nth-child(4n) { background: #ffe0d8; }
+@keyframes marqueeTags {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
 .search-wrap {
     padding: 14px 16px 8px;
 }
@@ -87,6 +125,17 @@ body {
     background: var(--c-orange);
     border: 2px solid var(--c-ink);
     border-radius: 3px;
+}
+.section-tip {
+    margin: -4px 0 12px;
+    padding: 8px 12px;
+    background: #fff;
+    border: 2px solid var(--c-ink);
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    color: var(--c-ink);
+    font-size: 13px;
+    font-weight: 700;
 }
 .today-list {
     display: flex;
@@ -423,18 +472,64 @@ body {
     .category-card .icon { width: 52px; height: 52px; font-size: 30px; }
     /* 顶部标题/banner 略放大，视觉更饱满 */
     .banner { height: 56px; font-size: 15px; }
+    .tag-marquee { margin-top: 16px; padding: 12px 0 14px; }
+    .tag-marquee-track { gap: 14px; animation-duration: 32s; }
+    .hot-tag { min-height: 38px; padding: 0 18px; font-size: 14px; }
     .section-title { font-size: 20px; }
 }
 </style>
 </head>
 <body>
 <div class="app-wrap">
-    <div class="banner">📢 迅雷搜索「南枝资源库」每日更新</div>
+    <div class="banner">📚 小初高学习资料每日更新，一键保存到网盘</div>
+    <div class="tag-marquee" aria-label="热门资源标签">
+        <div class="tag-marquee-track">
+            <span class="hot-tag">小学生资料</span>
+            <span class="hot-tag">一年级同步</span>
+            <span class="hot-tag">期末复习</span>
+            <span class="hot-tag">语文试卷</span>
+            <span class="hot-tag">奥数资料</span>
+            <span class="hot-tag">数学口算</span>
+            <span class="hot-tag">英语听力</span>
+            <span class="hot-tag">暑假预习</span>
+            <span class="hot-tag">期末真题</span>
+            <span class="hot-tag">四六级英语</span>
+            <span class="hot-tag">考研资料</span>
+            <span class="hot-tag">考公资料</span>
+            <span class="hot-tag">副业赚钱</span>
+            <span class="hot-tag">编程技术</span>
+            <span class="hot-tag">古籍电子书</span>
+            <span class="hot-tag">热门综艺</span>
+            <span class="hot-tag">连续剧</span>
+            <span class="hot-tag">高清电影</span>
+            <span class="hot-tag">游戏资源</span>
+            <span class="hot-tag">小学生资料</span>
+            <span class="hot-tag">一年级同步</span>
+            <span class="hot-tag">期末复习</span>
+            <span class="hot-tag">语文试卷</span>
+            <span class="hot-tag">奥数资料</span>
+            <span class="hot-tag">数学口算</span>
+            <span class="hot-tag">英语听力</span>
+            <span class="hot-tag">暑假预习</span>
+            <span class="hot-tag">期末真题</span>
+            <span class="hot-tag">四六级英语</span>
+            <span class="hot-tag">考研资料</span>
+            <span class="hot-tag">考公资料</span>
+            <span class="hot-tag">副业赚钱</span>
+            <span class="hot-tag">编程技术</span>
+            <span class="hot-tag">古籍电子书</span>
+            <span class="hot-tag">热门综艺</span>
+            <span class="hot-tag">连续剧</span>
+            <span class="hot-tag">高清电影</span>
+            <span class="hot-tag">游戏资源</span>
+        </div>
+    </div>
     <div class="search-wrap">
-        <input type="text" class="search-box" placeholder="搜索资料名称..." id="searchInput" autocomplete="off">
+        <input type="text" class="search-box" placeholder="搜年级、科目或资料名，如：三年级 / 语文" id="searchInput" autocomplete="off">
     </div>
     <div id="todaySection" class="section">
         <div class="section-title">🔥 今日更新</div>
+        <div class="section-tip">精选近期可保存资源，点“领取”即可保存到网盘</div>
         <div class="today-list" id="todayList"></div>
     </div>
     <div id="categorySection" class="section">
@@ -511,7 +606,7 @@ function renderToday() {
         html += '<div class="today-item">' +
             '<span class="res-name">' + r.title + '</span>' +
             '<span class="pan-tag pan-tag-' + type + '">' + getPanLabel(type) + '</span>' +
-            '<a href="' + r.link + '" rel="noopener" onclick="copyLink(\'' + r.link + '\', event)" class="btn-save btn-save-' + type + '">转存</a>' +
+            '<a href="' + r.link + '" rel="noopener" onclick="copyLink(\'' + r.link + '\', event)" class="btn-save btn-save-' + type + '">领取</a>' +
             '</div>';
     });
     document.getElementById('todayList').innerHTML = html;
@@ -700,7 +795,7 @@ function renderResourceList(items) {
         html += '<div class="resource-item">' +
             '<span class="res-name">' + r.title + '</span>' +
             '<span class="pan-tag pan-tag-' + type + '">' + getPanLabel(type) + '</span>' +
-            '<a href="' + r.link + '" rel="noopener" onclick="copyLink(\'' + r.link + '\', event)" class="btn-save btn-save-' + type + '">转存</a>' +
+            '<a href="' + r.link + '" rel="noopener" onclick="copyLink(\'' + r.link + '\', event)" class="btn-save btn-save-' + type + '">领取</a>' +
             '</div>';
     });
     el.innerHTML = html;
