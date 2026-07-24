@@ -11,6 +11,10 @@ var SITE_DATA = {
   ],
   resources: [
     {"id": 2508, "title": "28000+键盘皮肤苹果+安卓（鸿蒙）", "category": "更多资源", "tags": ["键盘皮肤","置顶"], "link": "https://pan.baidu.com/s/1GzQypaPP9LCOel1r3-7anQ?pwd=8888", "desc": "28000+键盘皮肤苹果+安卓（鸿蒙）", "date": "2026-06-03", "pinTop": true},
+    {"id": 2524, "title": "周星驰电影合集500G", "category": "影视剧", "tags": ["电影","周星驰","合集"], "link": "https://pan.quark.cn/s/8308b1ced36d", "desc": "周星驰电影合集500G", "date": "2026-07-24"},
+    {"id": 2525, "title": "美女图片视频（先保存，每日更新）", "category": "更多资源", "tags": ["美女图片","视频","每日更新"], "link": "https://pan.quark.cn/s/051d24d989c4", "desc": "美女图片视频（先保存，每日更新）", "date": "2026-07-24"},
+    {"id": 2526, "title": "新增美女壁纸", "category": "更多资源", "tags": ["美女壁纸","壁纸"], "link": "https://pan.quark.cn/s/9112982a0f57", "desc": "新增美女壁纸", "date": "2026-07-24"},
+    {"id": 2527, "title": "街拍视频", "category": "更多资源", "tags": ["街拍","视频"], "link": "https://pan.quark.cn/s/3d1c2bbe16f4", "desc": "街拍视频", "date": "2026-07-24"},
     {"id": 2515, "title": "洪恩系列全套 小初高上册预习资料", "category": "小学综合", "tags": ["洪恩","小学","初中","高中","预习","上册"], "link": "https://pan.quark.cn/s/f1b072195aba", "desc": "洪恩系列全套，小初高都有，上册预习一步到位", "date": "2026-07-18"},
     {"id": 2516, "title": "26秋数学《星级口算天天练》北师版一年级", "category": "小学数学", "tags": ["数学","口算","北师版","一年级","上册"], "link": "https://pan.quark.cn/s/b786ca56226a", "desc": "26秋数学星级口算天天练北师版一年级", "date": "2026-07-18"},
     {"id": 2517, "title": "26秋数学《星级口算天天练》北师版二年级", "category": "小学数学", "tags": ["数学","口算","北师版","二年级","上册"], "link": "https://pan.quark.cn/s/93babf682825", "desc": "26秋数学星级口算天天练北师版二年级", "date": "2026-07-18"},
