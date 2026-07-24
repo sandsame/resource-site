@@ -591,10 +591,11 @@ function isRecent(d) {
 
 function renderToday() {
     var pinned = resources.filter(function(r){ return r.pinTop; });
+    var canShowToday = function(r){ return r.showToday || (r.category !== '更多资源' && r.category !== '影视剧' && r.category !== '游戏'); };
     var today = resources.filter(function(r){ return !r.pinTop && isToday(r.date); });
     if (today.length === 0) today = resources.filter(function(r){ return !r.pinTop && isRecent(r.date); });
-    if (today.length === 0) today = resources.filter(function(r){ return !r.pinTop && r.category !== '更多资源' && r.category !== '影视剧' && r.category !== '游戏'; }).slice(0, 6);
-    today = today.filter(function(r){ return r.category !== '更多资源' && r.category !== '影视剧' && r.category !== '游戏'; });
+    if (today.length === 0) today = resources.filter(function(r){ return !r.pinTop && canShowToday(r); }).slice(0, 6);
+    today = today.filter(canShowToday);
     today.sort(function(a, b) {
         var order = {quark: 0, baidu: 1, xunlei: 2};
         return order[getPanType(a.link)] - order[getPanType(b.link)];
